@@ -36,15 +36,24 @@
     //alert("tester tester");
     console.log(x);
 }*/
-   function test() {
+   //function test() {
 
-       var btnParent = $(".resultwrapper");
+       /*var btnParent = $(".resultwrapper");
        console.log(btnParent);
        var buttons = btnParent.find(getElementsByClassName("buttom"));
        console.log(buttons);
        for (var i = 0; i < buttons.length; i++) {
            $(buttons[i]).html("<b>Hey atle"+i+"</b>");
            console.log(buttons[i]);
-       }
-   }
-   test();
+       }*/
+
+   //}
+   //test();
+/*$( document ).ready(function() {
+    $(".booking-link ").html("<h> Hey atle" + "</h>");
+});
+*/
+while (1>0){
+    $(".booking-link ").html("<h> Hey atle" + "</h>");
+}
+
