@@ -2,7 +2,8 @@
   "manifest_version": 2,
   "name": "testertester",
   "version": "0.1",
-  "web_accessible_resources": ["icon.png", "content.js"],
+  "web_accessible_resources": ["icon.png", "content.js","background.js","logo.png"],
+  "permissions" : ["webRequest","webRequestBlocking","<all_urls>"],
   "content_scripts": [
     {
       "matches": [
@@ -16,6 +17,7 @@
 
   },
   "background": {
-    "scripts": ["background.js"]
+    "scripts": ["background.js","jquery-3.5.0.min.js"],
+    "persistent": true
   }
 }

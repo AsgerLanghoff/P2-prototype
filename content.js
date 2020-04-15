@@ -49,14 +49,30 @@
 
    //}
    //test();
+/*$(".top-row").submit(function(e) {
+$(this).appendTo("<h> Hey atle" + "</h>");
+    e.preventDefault();
 
+});
 var run = false;
 $( document ).ready(function() {
     run = true;
 });
 
 while (run){
-    $(".booking-link ").html("<h> Hey atle" + "</h>");
+    //$(".booking-link ").html("<h> Hey atle" + "</h>");
+
 }
-
-
+*/
+/*$.when(load).done(function() {
+    $(".top-row").append("<h> Hey atle" + "</h>");
+});
+*/
+function letsTryThis2(){
+    $(".top-row").append('<img src="logo.png" alt="Simply Easy Learning"width="200"height="80">');
+}
+$(function(){
+    setTimeout(function(){
+        letsTryThis2();
+    },5000);
+});
