@@ -68,8 +68,13 @@ while (run){
     $(".top-row").append("<h> Hey atle" + "</h>");
 });
 */
+// sidste kørte function fra momondo er under id: "ampim"
 function letsTryThis2(){
-    $(".top-row").append('<img src="logo.png" alt="Simply Easy Learning"width="200"height="80">');
+    //$(".top-row").append('<div class="billede"> <img src="html\logo(1).jpg" alt="Test billede" width="120" height="300"> </div>');
+    var img = document.createElement('IMG');
+    var src = document.getElementsByClassName("top-row");
+    img.src = 'logo.png';
+    src[0].appendChild(img);
 }
 $(function(){
     setTimeout(function(){
