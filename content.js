@@ -70,14 +70,20 @@ while (run){
 */
 // sidste kørte function fra momondo er under id: "ampim"
 function letsTryThis2(){
-    //$(".top-row").append('<div class="billede"> <img src="html\logo(1).jpg" alt="Test billede" width="120" height="300"> </div>');
-    var img = document.createElement('IMG');
-    var src = document.getElementsByClassName("top-row");
-    img.src = 'logo.png';
-    src[0].appendChild(img);
+    $(".top-row").html('<div class="billede"> <img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/logo.png" alt="Test billede" align="left"> </div>');
 }
 $(function(){
     setTimeout(function(){
         letsTryThis2();
     },5000);
 });
+
+//Kode til at indsætte billede på erdetfredag.dk
+
+/*var pic = chrome.runtime.getURL("logo.png");
+$(document).ready(function() {
+    $(".yes").append('<div class="billede"> <img src= "chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/logo.png" alt="Test billede" width="120" height="300"> </div>');
+    console.log(pic);
+});
+
+ */
