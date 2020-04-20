@@ -20,7 +20,9 @@ class AccessData {
             }
         }
 
-        console.log(this.flightType)
+        for(let i = 0; i < this.flightType.length; i++) {
+            console.log(this.flightType[i]);
+        }
     }
 }
 
