@@ -9,7 +9,7 @@
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-3.5.0.min.js","content.js","CO2calculator.js"]
+      "js": ["jquery-3.5.0.min.js","content.js","CO2calculator.js", "AccessData.js", "C02Calculator.js"]
     }
   ],
   "browser_action": {
