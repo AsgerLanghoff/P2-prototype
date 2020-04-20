@@ -75,6 +75,8 @@ function letsTryThis2(){
 $(function(){
     setTimeout(function(){
         letsTryThis2();
+        var accessData = new AccessData();
+        accessData.setFlightType();
     },5000);
 });
 
@@ -87,6 +89,7 @@ $(document).ready(function() {
 });
 
  */
+
 
 
 

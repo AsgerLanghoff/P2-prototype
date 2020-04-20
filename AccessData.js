@@ -6,11 +6,11 @@ class AccessData {
     constructor() {
     }
 
-    setFlightType(className) {
+    setFlightType() {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let x = document.getElementsByClassName("resultWrapper")[i];
             for (let j = 0; j < x.getElementsByClassName("planeDetails details-subheading").length; j++) {
-                const y = x.getElementsByClassName("planeDetails details-subheading")[j];
+                var y = x.getElementsByClassName("planeDetails details-subheading")[j];
             }
         }
 
