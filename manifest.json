@@ -2,14 +2,14 @@
   "manifest_version": 2,
   "name": "testertester",
   "version": "0.1",
-  "web_accessible_resources": ["icon.png", "content.js","background.js","logo.png","logo(1).jpg"],
+  "web_accessible_resources": ["icon.png", "content.js","background.js","logo.png","logo(1).jpg","CO2calculator.js"],
   "permissions" : ["webRequest","webRequestBlocking","<all_urls>"],
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-3.5.0.min.js","content.js"]
+      "js": ["jquery-3.5.0.min.js","content.js","CO2calculator.js"]
     }
   ],
   "browser_action": {
