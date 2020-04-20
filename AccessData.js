@@ -11,16 +11,12 @@ class AccessData {
             let x = document.getElementsByClassName("resultWrapper")[i];
             for (let j = 0; j < x.getElementsByClassName("planeDetails details-subheading").length; j++) {
                 const y = x.getElementsByClassName("planeDetails details-subheading")[j];
-                for (let i = 0; i < y.length; i++) {
-                    let split = y[i].split("·");
-                    this.flightType.push(split[2]);
-
-                }
+                let split = y.innerText.split("·");
+                this.flightType.push(split[2]);
 
             }
         }
-
-        for(let i = 0; i < this.flightType.length; i++) {
+        for (let i = 0; i < this.flightType.length; i++) {
             console.log(this.flightType[i]);
         }
     }
