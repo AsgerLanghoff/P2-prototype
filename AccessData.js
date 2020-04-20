@@ -10,15 +10,16 @@ class AccessData {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let x = document.getElementsByClassName("resultWrapper")[i];
             for (let j = 0; j < x.getElementsByClassName("planeDetails details-subheading").length; j++) {
-                var y = x.getElementsByClassName("planeDetails details-subheading")[j];
+                const y = x.getElementsByClassName("planeDetails details-subheading")[j];
+                for (let i = 0; i < y.length; i++) {
+                    let split = y[i].split("·");
+                    this.flightType.push(split[2]);
+
+                }
+
             }
         }
 
-        let split = y.split("·");
-        for (let i = 0; i < split.length; i++) {
-            this.flightType.push(split[2]);
-
-        }
         console.log(this.flightType)
     }
 }
