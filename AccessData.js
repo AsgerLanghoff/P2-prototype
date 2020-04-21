@@ -28,9 +28,19 @@ class AccessData {
             let x = document.getElementsByClassName("resultWrapper")[i];
             for (let j = 0; j < x.getElementsByClassName("planeDetails details-subheading").length; j++) {
                 const y = x.getElementsByClassName("segmentDuration text-row")[j];
-                this.flightTime.push(y.innerText);
+                //this.flightTime.push(y.innerText);
+                let split = y.innerText.split(" ");
+                if (split.length >1){
+                this.flightTime.push(parseInt(split[0])*60+parseInt(split[1]));
 
+                }
+                else {
+                    this.flightTime.push(parseInt(y.innerText));
+
+                }
             }
+
+
         }
         for (let i = 0; i < this.flightTime.length; i++) {
             console.log(this.flightTime[i]);

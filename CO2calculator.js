@@ -5,7 +5,7 @@ class CO2calculator {
 
 
     //Calculates the C02 emission based on the ICAO calculation. The missing variables will be loaded from the dataset.
-    calculator(flightType, flightTime) {
+     calculator(flightType, flightTime) {
         let a = (getFuelConsumption(flightType, flightTime) * getFreightFactor()) / (getYSeats(flightType) * getLoadFactor(flightType));
         testResults.push(a);
         return a;
