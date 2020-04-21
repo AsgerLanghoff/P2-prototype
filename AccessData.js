@@ -43,7 +43,8 @@ class AccessData {
 
         }
         for (let i = 0; i < this.flightTime.length; i++) {
-            console.log(this.flightTime[i]);
+            let a = 3.16 * ((16.6*this.flightTime[i]) * 0.8)/((366)*(0.75));
+            console.log("The flight with" +this.flightType[i]+ "equals to "+a+"kg of c02 per passenger")
         }
     }
 }
