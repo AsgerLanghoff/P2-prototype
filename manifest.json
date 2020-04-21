@@ -2,22 +2,22 @@
   "manifest_version": 2,
   "name": "testertester",
   "version": "0.1",
-  "web_accessible_resources": ["icon.png", "content.js","background.js","logo.png","logo(1).jpg"],
+  "web_accessible_resources": ["icon.png", "Content.js","background.js","logo.png","logo(1).jpg"],
   "permissions" : ["webRequest","webRequestBlocking","<all_urls>"],
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
-      "js": ["jquery-3.5.0.min.js","content.js","CO2calculator.js", "AccessData.js"]
+      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js","tester.js"]
     }
   ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "logo.png"
 
   },
   "background": {
-    "scripts": ["jquery-3.5.0.min.js","background.js"],
+    "scripts": ["background.js"],
     "persistent": true
   }
 }
