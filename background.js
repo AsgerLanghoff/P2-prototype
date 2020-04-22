@@ -1,19 +1,25 @@
 // background.js
 
-/*window.onload = function() {
     // your code
+    //if (document. getElementsByClassName("resultWrapper")!=null){
+    document.getElementsByClassName("resultWrapper").addListener("mouseenter",function (event) {
+        console.log("Det virker!");
+    //e.addEventListener("mouseenter",function (event) {
+      //  console.log("Det virker!");
+    });
 
-    var e = document.getElementById('picture');
-    e.onmouseover = function () {
+
+    /*) = function () {
+        console.log("Det virker!");
         document.getElementById('popup').style.display = 'block';
     }
     e.onmouseout = function () {
         document.getElementById('popup').style.display = 'none';
     }
 };*/
-$(".resultWrapper").mouseenter(function(){
+/*$(".resultWrapper").mouseenter(function(){
     console.log("Det virker!")
 });
 $(".resultWrapper").mouseleave(function(){
     console.log("Det virker igen!")
-});
+});*/
