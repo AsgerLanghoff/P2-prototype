@@ -2,7 +2,18 @@
 
 // your code
 //if (document. getElementsByClassName("resultWrapper")!=null){
-let e = document.getElementsByClassName("resultWrapper");
+
+var resultWrapper = document.querySelector(".resultWrapper");
+
+resultWrapper.addEventListener("mouseover", function () {
+    console.log("test");
+
+});
+
+/*let e = document.getElementsByClassName("resultWrapper");
+
+console.log(e);
+console.log("test");
 
 for (let i = 0; i < e.length; i++) {
     e[i].addEventListener("mouseenter", function (event) {
@@ -11,6 +22,8 @@ for (let i = 0; i < e.length; i++) {
         //  console.log("Det virker!");
     });
 }
+
+ */
 
 /*) = function () {
     console.log("Det virker!");
