@@ -9,7 +9,7 @@
       "matches": [
         "*://*.momondo.dk/*"
       ],
-      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js","tester.js"]
+      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js"]
     }
   ],
   "browser_action": {
