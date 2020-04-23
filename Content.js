@@ -25,16 +25,26 @@
 
 
 function letsTryThis2() {
-    $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/logo.png" alt="Test billede" align="left"> </div> ' +
+    $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png" alt="Test billede" align="left"> </div> ' +
         '<div id="popup" style="display: none">billede </div>');
 }
+
+function show() {
+    $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png" alt="Test billede" align="left"> </div> ' +
+        '<div id="popup" style="display: block">billede </div>');
+    console.log("jatak");
+
+}
+
 
 $(function () {
     setTimeout(function () {
         letsTryThis2();
-        var accessData = new AccessData();
+        let accessData = new AccessData();
         accessData.setFlightType();
         accessData.setFlightTime();
+
+
     }, 5000);
 });
 
@@ -45,6 +55,12 @@ $(document).ready(function() {
     $(".yes").append('<div class="billede"> <img src= "chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/logo.png" alt="Test billede" width="120" height="300"> </div>');
     console.log(pic);
 });
+
+ $(".billede").mouseenter( function () {
+            $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png" alt="Test billede" align="left"> </div> ' +
+                '<div id="popup" style="display: cube"> billede </div>');
+            console.log("på");
+            });
 
  */
 

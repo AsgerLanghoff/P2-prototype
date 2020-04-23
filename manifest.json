@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "testertester",
   "version": "0.1",
-  "web_accessible_resources": ["icon.png", "Content.js","background.js","logo.png","logo(1).jpg"],
+  "web_accessible_resources": ["icon.png", "Content.js","background.js","data/logo.png","logo(1).jpg"],
   "permissions" : ["webRequest","webRequestBlocking","<all_urls>"],
   "content_scripts": [
     {
@@ -13,11 +13,11 @@
     }
   ],
   "browser_action": {
-    "default_icon": "logo.png"
+    "default_icon": "icon.png"
 
   },
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["jquery-3.5.0.min.js", "Content.js", "background.js"],
     "persistent": true
   }
 }

@@ -12,6 +12,10 @@ for (let i = 0; i < e.length; i++) {
     });
 }
 
+$(".top-row").mouseenter(show());
+
+
+
 /*) = function () {
     console.log("Det virker!");
     document.getElementById('popup').style.display = 'block';
@@ -22,7 +26,8 @@ e.onmouseout = function () {
 };*/
 /*$(".resultWrapper").mouseenter(function(){
     console.log("Det virker!")
-});
+});     
 $(".resultWrapper").mouseleave(function(){
     console.log("Det virker igen!")
 });*/
+
