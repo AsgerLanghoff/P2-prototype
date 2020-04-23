@@ -9,7 +9,7 @@
       "matches": [
         "*://*.momondo.dk/*"
       ],
-      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js","tester.js"]
+      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js", "tester.js"]
     }
   ],
   "browser_action": {
@@ -17,7 +17,11 @@
 
   },
   "background": {
+<<<<<<< HEAD
     "scripts": ["jquery-3.5.0.min.js", "Content.js", "background.js"],
     "persistent": true
+=======
+    "scripts": ["background.js"]
+>>>>>>> 709d1c16ba6325f8928d01b2d7b5222e0402197a
   }
 }

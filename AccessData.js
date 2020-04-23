@@ -3,6 +3,7 @@ class AccessData {
     flightType = new Array();
     flightTime = new Array();
 
+
     constructor() {
     }
     // looks through the sourcecode of the website and extracts the string text in the "planeDetails details-subheading"
@@ -39,8 +40,9 @@ class AccessData {
 
                 }
             }
-
-
+            for (let i = 0; i < this.flightTime.length; i++) {
+                console.log(this.flightTime[i]);
+            }
         }
 
         /* eksempel for udregnet flyrejse mellem cph og frankfurt med en  Embraer 190
