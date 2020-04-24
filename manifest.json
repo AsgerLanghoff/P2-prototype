@@ -2,26 +2,41 @@
   "manifest_version": 2,
   "name": "testertester",
   "version": "0.1",
-  "web_accessible_resources": ["icon.png", "Content.js","background.js","data/logo.png","logo(1).jpg"],
-  "permissions" : ["webRequest","webRequestBlocking","<all_urls>"],
+  "web_accessible_resources": [
+    "icon.png",
+    "Content.js",
+    "background.js",
+    "data/logo.png",
+    "logo(1).jpg"
+  ],
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>"
+  ],
   "content_scripts": [
     {
       "matches": [
         "*://*.momondo.dk/*"
       ],
-      "js": ["jquery-3.5.0.min.js","Content.js","CO2calculator.js", "AccessData.js", "tester.js"]
+      "js": [
+        "jquery-3.5.0.min.js",
+        "Content.js",
+        "CO2calculator.js",
+        "AccessData.js",
+        "tester.js"
+      ]
     }
   ],
   "browser_action": {
     "default_icon": "icon.png"
-
   },
   "background": {
-<<<<<<< HEAD
-    "scripts": ["jquery-3.5.0.min.js", "Content.js", "background.js"],
+    "scripts": [
+      "jquery-3.5.0.min.js",
+      "Content.js",
+      "background.js"
+    ],
     "persistent": true
-=======
-    "scripts": ["background.js"]
->>>>>>> 709d1c16ba6325f8928d01b2d7b5222e0402197a
   }
 }

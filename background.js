@@ -2,13 +2,13 @@
 
 // your code
 //if (document. getElementsByClassName("resultWrapper")!=null){
-let e = document.getElementsByClassName("resultWrapper");
-var resultWrapper = document.querySelector(".resultWrapper");
+//let e = document.getElementsByClassName("resultWrapper");
+//var resultWrapper = document.querySelector(".resultWrapper");
 
-resultWrapper.addEventListener("mouseover", function () {
-    console.log("test");
+//resultWrapper.addEventListener("mouseover", function () {
+//    console.log("test");
 
-});
+//});
 
 /*let e = document.getElementsByClassName("resultWrapper");
 
@@ -23,13 +23,13 @@ for (let i = 0; i < e.length; i++) {
     });
 }
 
-<<<<<<< HEAD
+
 $(".top-row").mouseenter(show());
 
 
-=======
+
  */
->>>>>>> 709d1c16ba6325f8928d01b2d7b5222e0402197a
+
 
 /*) = function () {
     console.log("Det virker!");
