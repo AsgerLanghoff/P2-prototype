@@ -48,10 +48,33 @@ function testPrint(){
 
 $(function () {
     setTimeout(function () {
+
         letsTryThis3();
         let accessData = new AccessData();
         accessData.setFlightType();
         accessData.setFlightTime();
+
+        //letsTryThis2();
+        /*let img = new DisplayImage("tester", "center");
+        img.setDataSource("chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png");
+        img.setElementLocation(".top-row");
+        img.setId("firstPic");
+*/
+        $(".top-row").html('<div class="DisplayData"> <div id="tempID"> </div> <img src="" alt=":(" align=""> </div> ');
+        console.log("virker1");
+        document.getElementById("tempID").src = "chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png";
+        console.log("virker2");
+        document.getElementById("tempID").alt = "alt";
+        console.log("virker3");
+        document.getElementById("tempID").align = "center";
+        console.log("virker4");
+        document.getElementById("tempID").id = "id";
+        console.log("virker5");
+
+        //let accessData = new AccessData();
+        //accessData.setFlightType();
+        //accessData.setFlightTime();
+
 
         $(".billede").mouseenter(function () {
             testPrint();
