@@ -12,69 +12,45 @@
 
 
 function letsTryThis2() {
-
     $(".ZEv0-price-bookingSection").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/logo.png" alt="Test billede" align="left"> </div> ' +
         '<div id="popup" style="display: none">billede </div>');
 }
 
 function letsTryThis3 () {
-    $(".ZEv0-price-bookingSection").html('<layer left = 0 top = 0 z-index = 1000><div class="link">\n' +
-        '    N\n' +
-        '  <div class="arrow">\n' +
-        '    <div class="drop">\n' +
-        '      <!--Contant Here-->\n' +
-        '      <div class="pic"></div>\n' +
+    $(".resultWrapper").css("overflow", "visible"); //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
+
+    $(".left-column").append(
+        '<div class="link">\n' + //hitboxen man skal hover over for at få vist info
+        '  <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="bar-billede" class = "displayBar"</img>\n' + //billedet af baren sat ind
+        //'  <div class="arrow">\n' +
+        '    <div class="drop">\n' + //infobox - indeholder nedenstående
+        '      <!--Content Here-->\n' +
+        '      <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/aplus.png" alt="aplus-billede" class="pic"></img>\n' +
         '      <div class="line one"></div>\n' +
         '      <div class="line two"></div>\n' +
         '      <div  class="line three"></div>\n' +
         '      <div class="line four"></div>\n' +
         '      <div class="line five"></div>\n' +
         '    </div>\n' +
-        '    </div>\n' +
-        '</div></layer>');
+        //'    </div>\n' +
+        '</div>');
 }
 
 function showPopUp() {
     let a = $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/logo.png" alt="Test billede" align="left"> </div> ' +
         '<div id="popup" style="display: block">billede </div>');
-
-    //console.log("jatak");
 }
 
 function testPrint(){
     console.log("forhelvede");
     }
 
-
 $(function () {
     setTimeout(function () {
-
         letsTryThis3();
         let accessData = new AccessData();
         accessData.setFlightType();
         accessData.setFlightTime();
-
-        //letsTryThis2();
-        /*let img = new DisplayImage("tester", "center");
-        img.setDataSource("chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png");
-        img.setElementLocation(".top-row");
-        img.setId("firstPic");
-*/
-        $(".top-row").html('<div class="DisplayData"> <div id="tempID"> </div> <img src="" alt=":(" align=""> </div> ');
-        console.log("virker1");
-        document.getElementById("tempID").src = "chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/logo.png";
-        console.log("virker2");
-        document.getElementById("tempID").alt = "alt";
-        console.log("virker3");
-        document.getElementById("tempID").align = "center";
-        console.log("virker4");
-        document.getElementById("tempID").id = "id";
-        console.log("virker5");
-
-        //let accessData = new AccessData();
-        //accessData.setFlightType();
-        //accessData.setFlightTime();
-
 
         $(".billede").mouseenter(function () {
             testPrint();
@@ -85,8 +61,6 @@ $(function () {
         })
     }, 5000);
 });
-
-
 
 
 

@@ -1,17 +1,19 @@
 /*Notification link*/
 
 /* boxen der bliver displayet*/
+
+
 .link{
     position:relative;
     /*tekst-farve*/
     color: #ffffff;
     /*kassefarve*/
-    background: #33a00c;
-    width:70px;
-    height:30px;
+    background: #EDECEC;
+    width:150px;
+    height:10px;
     border-radius:6px;
     margin-left:1px;
-    margin-top:1px;
+    margin-top:5px;
     text-align:center;
     padding-top:5px;
     font-family: 'Montserrat', sans-serif;
@@ -19,23 +21,37 @@
     cursor:pointer;
 }
 
+
+.displayBar{
+    /*position:relative;*/
+    width:150px;
+    height:5px;
+    /*border-radius:6px;
+    margin-left:1px;
+    margin-top:5px;
+    padding-top:5px;
+    cursor:pointer;*/
+}
+
 /*Notification Info-Box outer frame*/
-.arrow{
+/*.arrow{
     position:relative;
-    left: 10px;
+
     content:"";
-    margin-top:10px;
+    /*margin-top:10px;
     margin-left:40px;
     border-left:10px solid transparent;
     border-right:10px solid transparent;
     border-bottom:10px solid transparent;
     margin-top:5px;
 }
+*/
 
 .drop{
-    position:relative;
-    left: -40px;
-    content:"";
+    position:absolute;
+    right: -150px;
+    top: -75px;
+    content:"abc";
     margin-top:10px;
     margin-left:10px;
     /*margin-top:10px;*/
@@ -43,9 +59,9 @@
     height:0px;
     border-radius:50px;
     box-shadow:0px 0px 0px black;
-    z-index: 1000;
-    overflow-x: visible;
-    overflow-y: visible;
+    z-index: 1001;
+    overflow: hidden;
+    transition: 1ms;
 }
 
 /*Animationen for billedet*/
@@ -58,7 +74,7 @@
     margin-left:60px;
 }
 
-.drop .line{
+/*.drop .line{
     position:absolute;
     background:grey;
     height:8px;
@@ -68,16 +84,15 @@
 }
 /*End Notification Info-Box outer frame*/
 
-
 /*On-Hover Animation -- kassen med N i NÅR man hovere*/
-.link:hover{
-    width:71px;
-    height:31px;
+/*.displayBar:hover{
+    width:150px;
+    height:5px;
     margin-left:1px;
     margin-top:1px;
-}
+}*/
 
-.link:hover .arrow{
+/*.link:hover .arrow{
     position:absolute;
     width:0px;
     height:0px;
@@ -86,10 +101,10 @@
     border-bottom:10px solid white;
     margin-top:10px;
     margin-left:10px;
-}
+}*/
 
 .link:hover .drop{
-    position:absolute;
+    position:relative;
     background: #ffffff;
     width:200px;
     height:200px;
@@ -97,11 +112,15 @@
     margin-left:10px;
     border-radius:5px;
     box-shadow:1px 1px 10px black;
+    z-index: 1000;
+    overflow: hidden;
 }
 
 /*billedet*/
 .link:hover .pic {
-    background:#DEDEDE;
+    position:relative;
+    left: -55px;
+    /*background:#DEDEDE;*/
     width:80px;
     height:80px;
     margin-top:10px;

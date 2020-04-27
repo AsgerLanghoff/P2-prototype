@@ -1,21 +1,21 @@
 // background.js
 
 // your code
-//if (document. getElementsByClassName("resultWrapper")!=null){
-//let e = document.getElementsByClassName("resultWrapper");
+if (document. getElementsByClassName("resultWrapper")!=null) {
+    let e = document.getElementsByClassName("resultWrapper");
+}
 //var resultWrapper = document.querySelector(".resultWrapper");
 
-<<<<<<< HEAD
 
 
 //resultWrapper.addEventListener("mouseover", function () {
   //  console.log("test");
 
-=======
+
 //resultWrapper.addEventListener("mouseover", function () {
 //    console.log("test");
 
->>>>>>> 00566291f0d06009cc61f60f8bf203821f3d00b2
+
 //});
 
 /*let e = document.getElementsByClassName("resultWrapper");
@@ -31,16 +31,12 @@ for (let i = 0; i < e.length; i++) {
     });
 }
 
-<<<<<<< HEAD
-=======
-
 $(".top-row").mouseenter(show());
 
 
 
  */
 
->>>>>>> 00566291f0d06009cc61f60f8bf203821f3d00b2
 
 /*) = function () {
     console.log("Det virker!");
