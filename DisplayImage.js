@@ -71,6 +71,14 @@ class DisplayImage {
     }
 
 
+    hoverText() {
+        let access = new AccessData();
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper"); i++) {
+            document.getElementsByClassName("textBox")[i].innerHTML = access.resultWrapperFlightTime(i);
+        }
+    }
+
+
     setAlignement(alignement) {
         this.stylingWidth = alignement;
     }

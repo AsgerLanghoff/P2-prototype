@@ -18,7 +18,7 @@ class AccessData {
             //this.flightTime.push(y.innerText);
             let split = y.innerText.split(" ");
             if (split.length >1){
-                this.flightTime.push(parseInt(split[0])*60+parseInt(split[1]));
+                wrapperTime.push(parseInt(split[0])*60+parseInt(split[1]));
 
             }
             else {
@@ -26,13 +26,14 @@ class AccessData {
 
             }
         }
-        for (let i = 0; i < this.flightTime.length; i++) {
+        for (let i = 0; i < wrapperTime.length; i++) {
             console.log(wrapperTime[i]);
         }
-        return wrapperTime;
+        //return wrapperTime;
+        return num;
     }
 
-    
+
 
 
 

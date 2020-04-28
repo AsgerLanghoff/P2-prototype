@@ -18,6 +18,8 @@ $(function () {
 
 
         let accessData = new AccessData();
+        accessData.resultWrapperFlightTime(2);
+        displayImage.hoverText();
        // accessData.setFlightType();
         //accessData.setFlightTime();
 
