@@ -39,7 +39,8 @@
     }
   ],
   "browser_action": {
-    "default_icon": "data/logo.png"
+    "default_icon": "data/logo.png",
+    "default_popup": "DropdownMenu.html"
   },
   "background": {
     "scripts": [
