@@ -33,7 +33,8 @@
         "Content.js",
         "CO2calculator.js",
         "AccessData.js",
-        "tester.js"
+        "tester.js",
+        "DisplayImage.js"
       ]
     }
   ],
