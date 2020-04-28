@@ -8,6 +8,35 @@ class AccessData {
     }
     // looks through the sourcecode of the website and extracts the string text in the "planeDetails details-subheading"
     // where the plane information is stored.
+
+
+    resultWrapperFlightTime(num) {
+        const wrapperTime = new Array();
+        let wrapper = document.getElementsByClassName("resultWrapper")[num];
+        for (let j = 0; j < wrapper.getElementsByClassName("planeDetails details-subheading").length; j++) {
+            const y = wrapper.getElementsByClassName("segmentDuration text-row")[j];
+            //this.flightTime.push(y.innerText);
+            let split = y.innerText.split(" ");
+            if (split.length >1){
+                this.flightTime.push(parseInt(split[0])*60+parseInt(split[1]));
+
+            }
+            else {
+                wrapperTime.push(parseInt(y.innerText));
+
+            }
+        }
+        for (let i = 0; i < this.flightTime.length; i++) {
+            console.log(wrapperTime[i]);
+        }
+        return wrapperTime;
+    }
+
+    
+
+
+
+
     setFlightType() {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let x = document.getElementsByClassName("resultWrapper")[i];
@@ -24,6 +53,9 @@ class AccessData {
     }
     // looks through the sourcecode of the website and extracts the string text in the "segmentDuration text-row"
     // containing the flight durations.
+
+
+
     setFlightTime() {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let x = document.getElementsByClassName("resultWrapper")[i];
