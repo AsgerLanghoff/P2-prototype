@@ -47,10 +47,14 @@ function testPrint(){
 
 $(function () {
     setTimeout(function () {
-        letsTryThis3();
+        //letsTryThis3();
+
+        let displayImage = new DisplayImage();
+        displayImage.displayBar();
+
         let accessData = new AccessData();
-        accessData.setFlightType();
-        accessData.setFlightTime();
+       // accessData.setFlightType();
+        //accessData.setFlightTime();
 
         $(".billede").mouseenter(function () {
             testPrint();
