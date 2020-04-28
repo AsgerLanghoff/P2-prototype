@@ -34,12 +34,14 @@
         "Content.js",
         "CO2calculator.js",
         "AccessData.js",
-        "tester.js"
+        "tester.js",
+        "DisplayImage.js"
       ]
     }
   ],
   "browser_action": {
-    "default_icon": "data/logo.png"
+    "default_icon": "data/logo.png",
+    "default_popup": "DropdownMenu.html"
   },
   "background": {
     "scripts": [
