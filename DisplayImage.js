@@ -48,25 +48,26 @@ class DisplayImage {
 
             let e = $(".resultWrapper").get(i);
 
+
+            //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
+            $(".resultWrapper").css("overflow", "visible");
+
             //Here, we find the first instance of ".left-column" and appends some HTML code.
             $(e).find(".left-column").first().append(
-                '<div class="link">\n' + //hitboxen man skal hover over for at få vist info
-                '  <img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/bar.png" alt="bar-billede" class = "displayBar"</img>\n' + //billedet af baren sat ind
-                '  <div class="arrow-left">\n' +
-                '    <div class="drop">\n' + //infobox - indeholder nedenstående
-                '      <!--Content Here-->\n' +
-                '      <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/aplus.png" alt="aplus-billede" class="pic"></img>\n' +
-                '      <div class="line one"></div>\n' +
-                '      <div class="line two"></div>\n' +
-                '      <div  class="line three"></div>\n' +
-                '      <div class="line four"></div>\n' +
-                '      <div class="line five"></div>\n' +
-                '    </div>\n' +
-                //'    </div>\n' +
+                '<div class="barAttributes">' +
+
+                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar">' +
+
+
+                '<div class="textBox">' +
+
+                /*content here*/
+
+                '</div>' +
+
+
                 '</div>');
-
         }
-
     }
 
 

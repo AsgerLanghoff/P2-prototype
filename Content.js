@@ -10,75 +10,8 @@
 
 */
 
-
-function letsTryThis2() {
-    $(".ZEv0-price-bookingSection").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/logo.png" alt="Test billede" align="left"> </div> ' +
-        '<div id="popup" style="display: none">billede </div>');
-}
-
-function hoverPicture() {
-    $(".resultWrapper").css("overflow", "visible");
-
-
-    $(".left-column").append(
-        '<div class="barAttributes">' +
-
-        '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar">' +
-
-
-        '<div class="textBox">' +
-
-
-
-        '</div>' +
-
-
-
-
-
-
-
-
-        '</div>'
-    )
-}
-
-
-function letsTryThis3() {
-    $(".resultWrapper").css("overflow", "visible"); //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
-
-    $(".left-column").append(
-        '<div class="link">\n' + //hitboxen man skal hover over for at få vist info
-        '  <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="bar-billede" class = "displayBar"</img>\n' + //billedet af baren sat ind
-        '  <div class="arrow">\n' +
-        '    <div class="drop">\n' + //infobox - indeholder nedenstående
-        '      <!--Content Here-->\n' +
-        '      <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/aplus.png" alt="aplus-billede" class="pic"></img>\n' +
-        '      <div class="line one"></div>\n' +
-        '      <div class="line two"></div>\n' +
-        '      <div  class="line three"></div>\n' +
-        '      <div class="line four"></div>\n' +
-        '      <div class="line five"></div>\n' +
-        '    </div>\n' +
-        //'    </div>\n' +
-        '</div>');
-}
-
-function showPopUp() {
-    let a = $(".top-row").html('<div class="billede"> <div id="picture"> </div> <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/logo.png" alt="Test billede" align="left"> </div> ' +
-        '<div id="popup" style="display: block">billede </div>');
-}
-
-function testPrint() {
-    console.log("forhelvede");
-}
-
 $(function () {
     setTimeout(function () {
-
-        hoverPicture();
-        //letsTryThis3();
-        
 
         let displayImage = new DisplayImage();
         displayImage.displayBar();
@@ -88,15 +21,15 @@ $(function () {
        // accessData.setFlightType();
         //accessData.setFlightTime();
 
-        $(".billede").mouseenter(function () {
-            testPrint();
-        })
-        $(".billede").mouseleave(function () {
-            // $(this).find(showPopUp).show();
-            console.log("FARVEL");
-        })
     }, 5000);
 });
+
+
+
+
+
+
+
 
 
 /*(function(){

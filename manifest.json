@@ -11,7 +11,7 @@
     "data/cssFile.css",
     "data/bar.png",
     "data/aplus.png",
-    "data/cssFile.css"
+    "data/hoverStyle.css"
   ],
   "permissions": [
     "webRequest",
