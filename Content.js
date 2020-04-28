@@ -22,7 +22,7 @@ function letsTryThis3 () {
     $(".left-column").append(
         '<div class="link">\n' + //hitboxen man skal hover over for at få vist info
         '  <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="bar-billede" class = "displayBar"</img>\n' + //billedet af baren sat ind
-        //'  <div class="arrow">\n' +
+        '  <div class="arrow-left">\n' +
         '    <div class="drop">\n' + //infobox - indeholder nedenstående
         '      <!--Content Here-->\n' +
         '      <img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/aplus.png" alt="aplus-billede" class="pic"></img>\n' +
