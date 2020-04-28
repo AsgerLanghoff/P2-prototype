@@ -1,0 +1,58 @@
+
+/* ændrer på baren */
+.barAttributes {
+    position: absolute;
+
+    /* width og height på baren */
+    height: 5px;
+    width: 140px;
+
+
+    /* mellemrum fra toppen og ned*/
+    margin-top: 10px;
+
+    /* mellemru, i venstre side */
+    margin-left: 0px;
+
+    cursor: pointer;
+}
+
+/* attributes til billedet er bare alignet med div elementet */
+.showBar {
+    height: 100%;
+    width: 100%;
+
+    /* laver en border der afrunder hjørner*/
+    border-radius: 5px;
+}
+
+/* laver en box med size 0x0 */
+.textBox {
+    position: absolute;
+    margin-top: 0px;
+    top: -44px;
+
+    /* mellemrum tilvenstre for. højere left-værdi = placerer boksen mere til venstre */
+    left: 160px;
+
+
+    float: left;
+    width: 0px;
+    height: 0px;
+}
+
+
+/* ændrer textBox når der bliver hoveret over bar */
+.barAttributes:hover .textBox {
+
+    /*width og height af textbox */
+    width: 200px;
+    height: 200px;
+
+    background: #EDECEC;
+
+    /* laver en border med afrundede kanter*/
+    border-radius:5px;
+
+    z-index: 1001;
+}

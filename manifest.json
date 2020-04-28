@@ -10,7 +10,8 @@
     "logo(1).jpg",
     "data/cssFile.css",
     "data/bar.png",
-    "data/aplus.png"
+    "data/aplus.png",
+    "data/cssFile.css"
   ],
   "permissions": [
     "webRequest",
@@ -23,7 +24,7 @@
         "*://*.momondo.dk/*"
       ],
       "css": [
-        "data/cssFile.css"
+        "data/hoverStyle.css"
       ],
       "html": [
         "HoverBox.html"
