@@ -88,6 +88,10 @@ class DisplayImage {
         }
     }
 
+    displayText(){
+
+    }
+
 
 
 
