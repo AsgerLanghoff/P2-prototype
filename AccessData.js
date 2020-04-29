@@ -30,6 +30,8 @@ class AccessData {
         }
     }
 
+
+
     getWrapperTimeAsString() {
         let stringTime = this.wrapperTime.toString();
         return stringTime;

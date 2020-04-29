@@ -69,6 +69,10 @@ class DisplayImage {
         }
     }
 
+    displayText(){
+
+    }
+
 
 
 
