@@ -17,8 +17,10 @@ class AccessData {
             const y = wrapper.getElementsByClassName("segmentDuration text-row")[j];
             //this.flightTime.push(y.innerText);
             let split = y.innerText.split(" ");
+
             if (split.length > 1) {
                 this.wrapperTime.push(parseInt(split[0]) * 60 + parseInt(split[1]));
+
 
             } else {
                 this.wrapperTime.push(parseInt(y.innerText));
@@ -28,7 +30,9 @@ class AccessData {
         for (let i = 0; i < this.wrapperTime.length; i++) {
             console.log(this.wrapperTime[i]);
         }
+        //return wrapperTime;
     }
+
 
     getWrapperTimeAsString() {
         let stringTime = this.wrapperTime.toString();
