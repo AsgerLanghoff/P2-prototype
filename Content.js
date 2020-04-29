@@ -10,26 +10,30 @@
 
 */
 
+
+function showText(something) {
+    let div = document.getElementById('textBox');
+    div.innerHTML = something;
+}
+
+
 $(function () {
     setTimeout(function () {
+        let accessData = new AccessData();
+        //let a = accessData.resultWrapperFlightTime(4);
+        accessData.resultWrapperFlightTime(0);
 
         let displayImage = new DisplayImage();
         displayImage.displayBar();
+        showText(accessData.getWrapperTimeAsString());
+        console.log(accessData.getWrapperTimeAsString());
 
 
-        let accessData = new AccessData();
-       // accessData.setFlightType();
-        //accessData.setFlightTime();
+        // accessData.setFlightType();
+        //accessData.setFlightTime(4);
 
     }, 5000);
 });
-
-
-
-
-
-
-
 
 
 /*(function(){

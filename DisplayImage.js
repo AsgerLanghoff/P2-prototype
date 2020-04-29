@@ -59,8 +59,7 @@ class DisplayImage {
                 '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar">' +
 
 
-                '<div class="textBox">' +
-
+                '<div class="textBox" id="textBox">' +
                 /*content here*/
 
                 '</div>' +
@@ -69,6 +68,8 @@ class DisplayImage {
                 '</div>');
         }
     }
+
+
 
 
     setAlignement(alignement) {
