@@ -56,10 +56,10 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
                 '<div class="barAttributes">' +
 
-                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar">' +
+                '<img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/bar.png" alt="test bar" class = "showBar">' +
 
 
-                '<div class="textBox">' +
+                '<div class="textBox" id="textBox">' +
 
                 /*content here*/
 
@@ -67,15 +67,23 @@ class DisplayImage {
 
 
                 '</div>');
+
+
+
+            document.getElementById("textBox").id = "resultWrapper" + i;
         }
+
+        for (let i = 0 ; i < document.getElementsByClassName("resultWrapper"); i++) {
+            console.log(document.getElementsByClassName("textBox")[i].id);
+        }
+
     }
 
 
     hoverText() {
-        let access = new AccessData();
         for (let i = 0; i < document.getElementsByClassName("resultWrapper"); i++) {
-            let s = access.resultWrapperFlightTime(i);
-            document.getElementsByClassName("textBox")[i].innerHTML = toString(s);
+            let div = document.getElementById("textBox")[i]
+            div.innerHTML = "Det virker lidt";
         }
     }
 
