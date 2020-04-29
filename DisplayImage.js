@@ -88,6 +88,8 @@ class DisplayImage {
     }
 
 
+
+
     setAlignement(alignement) {
         this.stylingWidth = alignement;
     }
