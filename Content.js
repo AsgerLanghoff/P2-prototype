@@ -11,26 +11,31 @@
 */
 
 
-function showText(something) {
-    let div = document.getElementById('textBox');
+function showText(something, string) {
+    let div = document.getElementById(string);
+    console.log("div= " + div);
     div.innerHTML = something;
 }
 
 
 $(function () {
     setTimeout(function () {
-        let accessData = new AccessData();
+
         //let a = accessData.resultWrapperFlightTime(4);
-        accessData.resultWrapperFlightTime(0);
+
 
         let displayImage = new DisplayImage();
         displayImage.displayBar();
-        showText(accessData.getWrapperTimeAsString());
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+            let accessData = new AccessData();
+            accessData.resultWrapperFlightTime(i);
+            showText(accessData.getWrapperTimeAsString(), "resultWrapper" + i);
+        }
+
         console.log(accessData.getWrapperTimeAsString());
 
-        accessData.resultWrapperFlightTime(2);
-        displayImage.hoverText();
-       // accessData.setFlightType();
+
+        // accessData.setFlightType();
         //accessData.setFlightTime();
 
     }, 5000);

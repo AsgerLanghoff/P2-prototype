@@ -72,10 +72,11 @@ class DisplayImage {
 
             document.getElementById("textBox").id = "resultWrapper" + i;
         }
-
-        for (let i = 0 ; i < document.getElementsByClassName("resultWrapper"); i++) {
+        console.log("pre id print");
+        for (let i = 0 ; i < document.getElementsByClassName("resultWrapper").length; i++) {
             console.log(document.getElementsByClassName("textBox")[i].id);
         }
+        console.log("after id print");
 
     }
 
