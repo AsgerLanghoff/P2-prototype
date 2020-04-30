@@ -2,8 +2,10 @@
 .barAttributes {
     position: absolute;
 
-    /* width og height på baren */
-    height: 5px;
+    /*background: #6fce1d; /* farve på div element, skal fjernes senere, fungerer som hitbox */
+
+    /* width og height på hit-boxen */
+    height: 15px;
     width: 140px;
 
 
@@ -18,12 +20,31 @@
 
 /* attributes til billedet er bare alignet med div elementet */
 .showBar {
-    height: 100%;
+    position: absolute;
+
+    /* placerer billedet i midten så der er 2px på hver side */
+    margin-top: 5px;
+
+
+    height: 5px;
     width: 100%;
+
 
     /* laver en border der afrunder hjørner*/
     border-radius: 5px;
 }
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-top: -5px;
+    left: 140px;
+    border-top: 0px solid transparent;
+    border-right: 0px solid #959595;
+    border-bottom: 0px solid transparent;
+}
+
 
 /* laver en box med size 0x0 */
 .textBox {
@@ -35,7 +56,7 @@
     left: 160px;
 
 
-    font-size:0em;
+    font-size: 0em;
 
 
     float: left;
@@ -43,21 +64,65 @@
     height: 0px;
 }
 
+.barAttributes:hover .triangle-left {
+    width: 0;
+    height: 0;
+    position: absolute;
+    margin-top: -5px;
+    left: 140px;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #c4c4c4;
+    border-bottom: 10px solid transparent;
+}
+
 
 /* ændrer textBox når der bliver hoveret over bar */
 .barAttributes:hover .textBox {
-
     /*width og height af textbox */
     width: 200px;
     height: 200px;
 
     background: #EDECEC;
+
+    /*tekst attributes*/
     color: black;
-    font-size: 1.1em;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1em;
+    font-weight: bold;
+    font-family: Arial, Verdana;
+    /*===================*/
 
     /* laver en border med afrundede kanter*/
     border-radius: 5px;
 
     z-index: 1001;
 }
+
+
+
+
+.barAttributes:hover .textBox .rank {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    background: blueviolet;
+    text-align: center;
+}
+
+
+
+
+
+.barAttributes:hover .textBox .CO2-print {
+    position: absolute;
+    border-radius: 5px;
+    margin-left: 45px;
+    width: auto;
+    height: auto;
+    background: #e8a41d;
+    font-size: 0.5em;
+
+}
+

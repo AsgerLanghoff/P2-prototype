@@ -56,25 +56,33 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
                 '<div class="barAttributes">' +
 
-                '<img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/bar.png" alt="test bar" class = "showBar">' +
+                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
+
+
+
+                '<div class="triangle-left"></div>' +
 
 
                 '<div class="textBox" id="textBox">' +
 
-                /*content here*/
+                '<div class="rank" id="rank" </div>' +
+                '<div class="CO2-print" id="CO2-print" </div>' +
 
-                '</div>' +
 
+
+                '</div>'+
+                //'</div>' +
+                //'</div>' +
 
                 '</div>');
 
 
 
-            document.getElementById("textBox").id = "resultWrapper" + i;
+            document.getElementById("CO2-print").id = "resultWrapper" + i;
         }
         console.log("pre id print");
         for (let i = 0 ; i < document.getElementsByClassName("resultWrapper").length; i++) {
-            console.log(document.getElementsByClassName("textBox")[i].id);
+            console.log(document.getElementsByClassName("CO2-print")[i].id);
         }
         console.log("after id print");
 

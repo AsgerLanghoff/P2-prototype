@@ -32,8 +32,6 @@ $(function () {
             showText(accessData.getWrapperTimeAsString(), "resultWrapper" + i);
         }
 
-        console.log(accessData.getWrapperTimeAsString());
-
 
         // accessData.setFlightType();
         //accessData.setFlightTime();
