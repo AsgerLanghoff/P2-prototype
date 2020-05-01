@@ -44,7 +44,7 @@ class DisplayImage {
         const elements = document.getElementsByClassName("resultWrapper");
         for (let i = 0; i < elements.length; i++) {
 
-            // e = a singular resultWrapper
+            // e = a singular resultWrapper from the "elements"-array position [i]
 
             let e = $(".resultWrapper").get(i);
 
