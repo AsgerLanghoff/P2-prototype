@@ -65,7 +65,7 @@ class DisplayImage {
 
                 '<div class="textBox" id="textBox">' +
 
-                '<div class="rank" id="rank" </div>' +
+                '<span> Indsæt lang tekst her det er mega fedt</span>' +
                 '<div class="CO2-print" id="CO2-print" </div>' +
 
 
