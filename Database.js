@@ -1,11 +1,11 @@
 class Database {
 
-    LIST_OF_PLANES = ["Boeing 737-800", 0, 0];
+    LIST_OF_PLANES = ["Boeing 737-800", "Boeing 737-700", "Airbus A320", "Airbus A321", "Boeing 757-200", "Bombardier CRJ200", "Airbus A319", "Boeing 737-900ER", "Embraer E175", "Bombardier CRJ900"]; //List of the most used Aircrafts http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
 
     LIST_OF_DISTANCE = [125, 250, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500]; //Nautical Miles. This distance is in nautical miles.
 
     FUEL_CONSUMPTION = [
-        [1715, 3494, 4621, 6221, 7749, 10666, 13460, 16170, 18818, 21415, 23972], //This line corresponds to LIST_OF_PLANES[0], aka "Boeing 737-800"
+        [1715, 3494, 4621, 6221, 7749, 10666, 13460, 16170, 18818, 21415, 23972], //This line corresponds to LIST_OF_PLANES[0], aka "Boeing 737-800". The numbers are pulled from https://www.icao.int/environmental-protection/CarbonOffset/Documents/Methodology%20ICAO%20Carbon%20Calculator_v10-2017.pdf
         [0, 0],
         [0, 0]
     ];
