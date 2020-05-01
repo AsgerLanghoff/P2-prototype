@@ -25,7 +25,7 @@
     /* placerer billedet i midten så der er 2px på hver side */
     margin-top: 5px;
 
-
+    box-shadow:0px 0px 0px black;
     height: 5px;
     width: 100%;
 
@@ -38,7 +38,7 @@
     width: 0;
     height: 0;
     position: absolute;
-    margin-top: -5px;
+    margin-top: -2px;
     left: 140px;
     border-top: 0px solid transparent;
     border-right: 0px solid #959595;
@@ -64,11 +64,26 @@
     height: 0px;
 }
 
+.body {
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+}
+
+
+.barAttributes:hover .showBar {
+    /* skygge på baren når man hover + farven*/
+    box-shadow:1px 1px 10px #0025b3;
+}
+
+
+
+
 .barAttributes:hover .triangle-left {
     width: 0;
     height: 0;
     position: absolute;
-    margin-top: -5px;
+    margin-top: -2px;
     left: 140px;
     border-top: 10px solid transparent;
     border-right: 20px solid #c4c4c4;
@@ -82,7 +97,7 @@
     width: 200px;
     height: 200px;
 
-    background: #EDECEC;
+    background: #d9d9d9;
 
     /*tekst attributes*/
     color: black;
@@ -100,7 +115,7 @@
 
 
 
-.barAttributes:hover .textBox .rank {
+/*.barAttributes:hover .textBox .rank {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -109,7 +124,7 @@
     margin-left: 5px;
     background: blueviolet;
     text-align: center;
-}
+}*/
 
 
 
