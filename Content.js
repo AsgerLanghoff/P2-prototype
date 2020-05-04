@@ -9,8 +9,6 @@
     '<div id="popup" style="display: none">billede </div>');
 
 */
-
-
 function showText(something, string) {
     let div = document.getElementById(string);
     console.log("div= " + div);
@@ -22,7 +20,6 @@ $(function () {
     setTimeout(function () {
 
         //let a = accessData.resultWrapperFlightTime(4);
-
 
         let displayImage = new DisplayImage();
         displayImage.displayBar();
