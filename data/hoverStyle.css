@@ -104,31 +104,12 @@
     font-size: 2.1em;
     font-weight: bold;
     font-family: Arial, Verdana;
-    /*===================*/
 
     /* laver en border med afrundede kanter*/
     border-radius: 5px;
 
     z-index: 1001;
 }
-
-
-
-
-/*.barAttributes:hover .textBox .rank {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 5px;
-    margin-left: 5px;
-    background: blueviolet;
-    text-align: center;
-}*/
-
-
-
-
 
 .barAttributes:hover .textBox .CO2-print {
     position: absolute;

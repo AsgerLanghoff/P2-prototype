@@ -48,7 +48,6 @@ class DisplayImage {
 
             let e = $(".resultWrapper").get(i);
 
-
             //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
             $(".resultWrapper").css("overflow", "visible");
 
@@ -59,16 +58,13 @@ class DisplayImage {
                 '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
 
 
-
                 '<div class="triangle-left"></div>' +
-
 
                 '<div class="textBox" id="textBox">' +
 
                 '<span> Indsæt lang tekst her det er mega fedt</span>' +
+
                 '<div class="CO2-print" id="CO2-print" </div>' +
-
-
 
                 '</div>'+
                 //'</div>' +
@@ -80,29 +76,9 @@ class DisplayImage {
 
             document.getElementById("CO2-print").id = "resultWrapper" + i;
         }
-        console.log("pre id print");
         for (let i = 0 ; i < document.getElementsByClassName("resultWrapper").length; i++) {
-            console.log(document.getElementsByClassName("CO2-print")[i].id);
-        }
-        console.log("after id print");
-
-    }
-
-
-    hoverText() {
-        for (let i = 0; i < document.getElementsByClassName("resultWrapper"); i++) {
-            let div = document.getElementById("textBox")[i]
-            div.innerHTML = "Det virker lidt";
         }
     }
-
-    displayText(){
-
-    }
-
-
-
-
     setAlignement(alignement) {
         this.stylingWidth = alignement;
     }
