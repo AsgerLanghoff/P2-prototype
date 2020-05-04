@@ -39,6 +39,30 @@ class AccessData {
     }
 
 
+    resultWrapperFlightType(num ) {
+        let wrapper = document.getElementsByClassName("resultWrapepr")[num];
+        for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
+            let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
+            let split = y.innerText.split("·");
+            this.flightType.push(split[2]);
+        }
+    }
+
+
+    getWrapperFlightTypeAsString() {}
+
+
+
+
+
+
+
+
+
+
+
+
+    //Old, still functional code.
     setFlightType() {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let x = document.getElementsByClassName("resultWrapper")[i];

@@ -9,7 +9,7 @@ class Database {
         [0, 0],
         [0, 0]
     ];
-    FUEL_CONSUMPTION_OTHER = [0, 0, 0];
+    FUEL_CONSUMPTION_OTHER = [4205, 8452, 11054, 14688, 18192, 24999, 31691, 38363, 45056, 51831, 58678, 65621, 72666, 79159, 85687, 89019, 91982, 94586, 96840, 98752]; // In reality, these number can vary +- 20'000...
 
     NUMBER_OF_Y_SEATS = [162, 0, 0]; //The position in this array corresponds to LIST_OF_PLANES. Y_Seats = economy seats
     NUMBER_OF_Y_SEATS_OTHER = 100; //This number is open for discussion
@@ -19,7 +19,7 @@ class Database {
     PAX_TO_FREIGHT_FACTOR = 85; //This number is open for discussion
 
     KM_PER_HOUR = [842, 0, 0]; ////The position in this array corresponds to LIST_OF_PLANES. Enter the cruise speed of the aircraft
-    KM_PER_HOUR_OTHER = 0;
+    KM_PER_HOUR_OTHER = 850;
 
 
     constructor() {
