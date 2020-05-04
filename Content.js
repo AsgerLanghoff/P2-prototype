@@ -17,7 +17,19 @@ function showText(something, string) {
     div.innerHTML = something;
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("det nu");
+    let displayImage = new DisplayImage();
+    displayImage.displayBar();
+    for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+        let accessData = new AccessData();
+        accessData.resultWrapperFlightTime(i);
+        showText(accessData.getWrapperTimeAsString(), "resultWrapper" + i);
+    }
 
+});
+
+/*
 $(function () {
     setTimeout(function () {
 
@@ -36,9 +48,9 @@ $(function () {
         // accessData.setFlightType();
         //accessData.setFlightTime();
 
-    }, 5000);
+    }, 0);
 });
-
+*/
 
 /*(function(){
     $("#picture").hover(function() {
