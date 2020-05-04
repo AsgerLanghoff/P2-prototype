@@ -18,6 +18,7 @@ function showText(something, string) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    console.log("det nu");
     let displayImage = new DisplayImage();
     displayImage.displayBar();
     for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
