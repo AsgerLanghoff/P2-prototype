@@ -4,19 +4,20 @@ var testResults = new Array(); //Since we can not use static variables in javaSc
 class CO2calculator {
 
 
+
     //Calculates the C02 emission based on the ICAO calculation. The missing variables will be loaded from the dataset.
-     calculator(flightType, flightTime) {
-        let a = (getFuelConsumption(flightType, flightTime) * getFreightFactor()) / (getYSeats(flightType) * getLoadFactor(flightType));
+     calculator(flightType, flightTime, num) {
+         let dataBase = new Database();
+        let a = 3.16 * ((dataBase.getFuelConsumption(flightType, flightTime) * dataBase.getFreightFactor()) / (dataBase.getNumberOfYSeats(flightType) * dataBase.getLoadFactor(flightType)));
         testResults.push(a);
-        return a;
+         this.getTestResultAsString(num);
     }
 
-    //If we dont have the available data for a specific flight type, we can use this function without a flight type.
-    calculator(flightTime) {
-        let a = (getFuelConsumption(flightTime) * getFreightFactor()) / (getYSeats() * getLoadFactor());
-        testResults.push(a);
-        return a;
+    getTestResultAsString(num) {
+        let result = testResults[num].toString();
+        return result;
     }
+
 
     //This function clears the "testResutls" array
     clearResults() {
