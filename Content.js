@@ -21,8 +21,25 @@ function showText(something, string) {
 $(function () {
     setTimeout(function () {
 
-        //let a = accessData.resultWrapperFlightTime(4);
 
+        let displayImage = new DisplayImage();
+        displayImage.displayBar();
+
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+            let calc = new CO2calculator(i);
+        }
+
+        for (let i = 0; i < testResults.length; i++) {
+            console.log(testResults[i]);
+        }
+
+
+
+
+        
+
+        //let a = accessData.resultWrapperFlightTime(4);
+/*
         let displayImage = new DisplayImage();
         displayImage.displayBar();
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
@@ -34,7 +51,7 @@ $(function () {
 
         // accessData.setFlightType();
         //accessData.setFlightTime();
-
+*/
     }, 0);
 });
 
