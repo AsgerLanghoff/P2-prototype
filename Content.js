@@ -23,19 +23,18 @@ $(function () {
 
 
         let displayImage = new DisplayImage();
-        var emissionArray = new Array();
+        //var emissionArray = new Array();
         displayImage.displayBar();
 
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let calc = new CO2calculator(i);
-            emissionArray.push(calc);
-            emissionArray[i].calculator(i);
+           // emissionArray.push(calc);
+            //emissionArray[i].calculator(i);
+            showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
 
         }
 
-        for (let i = 0; i < testResults.length; i++) {
-            console.log(testResults[i]);
-        }
+
 
 
 
