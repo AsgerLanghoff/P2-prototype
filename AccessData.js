@@ -28,7 +28,7 @@ class AccessData {
             }
         }
         for (let i = 0; i < this.wrapperTime.length; i++) {
-            console.log(this.wrapperTime[i]);
+         //   console.log(this.wrapperTime[i]);
         }
         //return wrapperTime;
     }
@@ -38,7 +38,7 @@ class AccessData {
     }
 
     getOneFlightTime(index){
-        return this.flightTime[index];
+        return this.wrapperTime[index];
     }
 
 
