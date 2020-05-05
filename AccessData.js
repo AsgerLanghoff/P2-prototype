@@ -46,7 +46,7 @@ class AccessData {
         let wrapper = document.getElementsByClassName("resultWrapper")[num];
         for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
             let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
-            let split = y.innerText.split("·");
+            let split = planeType.innerText.split("·");
             this.flightType.push(split[2]);
         }
     }

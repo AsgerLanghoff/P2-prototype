@@ -11,10 +11,11 @@ class CO2calculator {
      calculator(num) {
          let wrapper = document.getElementsByClassName("resultWrapper")[num];
          let accessData = new AccessData();
+         let dataBase = new Database();
          accessData.resultWrapperFlightType(num);
          accessData.resultWrapperFlightTime(num);
          for (let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
-             let dataBase = new Database();
+
              let flightEmission = 3.16 * ((dataBase.getFuelConsumption(accessData.getOneFlightType(i), accessData.getOneFlightTime(i)) * dataBase.getFreightFactor()) / (dataBase.getNumberOfYSeats(accessData.getOneFlightType(i)) * dataBase.getLoadFactor(accessData.getOneFlightType(i))));
              this.wrapperResults.push(flightEmission);
          }

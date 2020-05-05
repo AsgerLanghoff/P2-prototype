@@ -36,7 +36,7 @@ $(function () {
 
 
 
-        
+
 
         //let a = accessData.resultWrapperFlightTime(4);
 /*
@@ -52,7 +52,7 @@ $(function () {
         // accessData.setFlightType();
         //accessData.setFlightTime();
 */
-    }, 0);
+    }, 5000);
 });
 
 
