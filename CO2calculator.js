@@ -8,9 +8,10 @@ class CO2calculator {
     //Calculates the C02 emission based on the ICAO calculation. The missing variables will be loaded from the dataset.
      calculator(flightType, flightTime, num) {
          let dataBase = new Database();
-        let a = 3.16 * ((dataBase.getFuelConsumption(flightType, flightTime) * dataBase.getFreightFactor()) / (dataBase.getNumberOfYSeats(flightType) * dataBase.getLoadFactor(flightType)));
-        testResults.push(a);
-         this.getTestResultAsString(num);
+        //let a = 3.16 * ((dataBase.getFuelConsumption(flightType, flightTime) * dataBase.getFreightFactor()) / (dataBase.getNumberOfYSeats(flightType) * dataBase.getLoadFactor(flightType)));
+        let a = 10;
+         testResults.push(a);
+         return this.getTestResultAsString(num);
     }
 
     getTestResultAsString(num) {

@@ -34,12 +34,12 @@ class AccessData {
     }
 
     getWrapperTimeAsString() {
-        let stringTime = this.wrapperTime.toString();
+        let stringTime = this.wrapperType.toString();
         return stringTime;
     }
 
 
-    resultWrapperFlightType(num ) {
+    resultWrapperFlightType(num) {
         let wrapper = document.getElementsByClassName("resultWrapepr")[num];
         for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
             let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
@@ -48,8 +48,10 @@ class AccessData {
         }
     }
 
-
-    getWrapperFlightTypeAsString() {}
+    getWrapperFlightTypeAsString() {
+        let flightTypeString = this.flightType.toString();
+        return flightTypeString;
+    }
 
 
 
