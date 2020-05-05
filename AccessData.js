@@ -28,10 +28,11 @@ class AccessData {
             }
         }
         for (let i = 0; i < this.wrapperTime.length; i++) {
-            console.log(this.wrapperTime[i]);
+         //   console.log(this.wrapperTime[i]);
         }
         //return wrapperTime;
     }
+
 
     getWrapperTimeAsString() {
         let stringTime = this.wrapperType.toString();
@@ -39,11 +40,30 @@ class AccessData {
     }
 
 
-    resultWrapperFlightType(num) {
-        let wrapper = document.getElementsByClassName("resultWrapepr")[num];
+    resultWrapperFlightType(num ) {
+        let wrapper = document.getElementsByClassName("resultWrapper")[num];
         for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
             let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
-            let split = y.innerText.split("·");
+            let split = planeType.innerText.split("·");
+            this.flightType.push(split[2]);
+        }
+    }
+
+    getOneFlightType(index){
+        return this.flightType[index];
+    }
+
+    getOneFlightTime(index){
+        return this.wrapperTime[index];
+    }
+
+
+    resultWrapperFlightType(num ) {
+        let wrapper = document.getElementsByClassName("resultWrapper")[num];
+
+        for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
+            let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
+            let split = planeType.innerText.split("·");
             this.flightType.push(split[2]);
         }
     }

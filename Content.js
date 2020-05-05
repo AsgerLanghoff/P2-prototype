@@ -19,8 +19,32 @@ function showText(something, string) {
 $(function () {
     setTimeout(function () {
 
+
         //let a = accessData.resultWrapperFlightTime(4);
         let calculator = new CO2calculator();
+
+
+        let displayImage = new DisplayImage();
+        //var emissionArray = new Array();
+        displayImage.displayBar();
+
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+            let calc = new CO2calculator(i);
+           // emissionArray.push(calc);
+            //emissionArray[i].calculator(i);
+            showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
+
+        }
+
+
+
+
+
+
+
+
+        //let a = accessData.resultWrapperFlightTime(4);
+/*
         let displayImage = new DisplayImage();
         displayImage.displayBar();
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
@@ -32,6 +56,9 @@ $(function () {
         // accessData.setFlightType();
         //accessData.setFlightTime();
 
+
+
+*/
     }, 5000);
 });
 

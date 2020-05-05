@@ -34,7 +34,8 @@
         "Content.js",
         "CO2calculator.js",
         "AccessData.js",
-        "DisplayImage.js"
+        "DisplayImage.js",
+        "Database.js"
       ]
     }
   ],
@@ -53,36 +54,7 @@
       "background.js",
       "data/logo.png",
       "logo(1).jpg"
-    ],
-    "permissions": [
-      "webRequest",
-      "webRequestBlocking",
-      "<all_urls>"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "*://*.momondo.dk/*"
-        ],
-        "js": [
-          "jquery-3.5.0.min.js",
-          "Content.js",
-          "CO2calculator.js",
-          "AccessData.js",
-          "tester.js"
-        ]
-      }
-    ],
-    "browser_action": {
-      "default_icon": "icon.png"
-    },
-    "background": {
-      "scripts": [
-        "jquery-3.5.0.min.js",
-        "Content.js",
-        "background.js"
-      ],
-      "persistent": true
-    }
+    ]
+
   }
 }

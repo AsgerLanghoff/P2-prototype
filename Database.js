@@ -6,19 +6,20 @@ class Database {
 
     FUEL_CONSUMPTION = [
         [1715, 3494, 4621, 6221, 7749, 10666, 13460, 16170, 18818, 21415, 23972], //This line corresponds to LIST_OF_PLANES[0], aka "Boeing 737-800". The numbers are pulled from https://www.icao.int/environmental-protection/CarbonOffset/Documents/Methodology%20ICAO%20Carbon%20Calculator_v10-2017.pdf
-        [0, 0],
+        [1586, 3202],
         [0, 0]
     ];
-    FUEL_CONSUMPTION_OTHER = [4205, 8452, 11054, 14688, 18192, 24999, 31691, 38363, 45056, 51831, 58678, 65621, 72666, 79159, 85687, 89019, 91982, 94586, 96840, 98752]; // In reality, these number can vary +- 20'000...
 
-    NUMBER_OF_Y_SEATS = [162, 0, 0]; //The position in this array corresponds to LIST_OF_PLANES. Y_Seats = economy seats
-    NUMBER_OF_Y_SEATS_OTHER = 100; //This number is open for discussion
+    FUEL_CONSUMPTION_OTHER = [1672, 3430, 4585, 6212, 7772, 10766, 13648, 16452, 45056, 51831, 58678, 65621, 72666, 79159, 85687, 89019, 91982, 94586, 96840, 98752]; // In reality, these number can vary +- 20'000...
 
-    PAX_LOAD_FACTOR = 75; //This number is open for discussion
+    NUMBER_OF_Y_SEATS = [162, 141, 0]; //The position in this array corresponds to LIST_OF_PLANES. Y_Seats = economy seats
+    NUMBER_OF_Y_SEATS_OTHER = 165 ; //This number is open for discussion
 
-    PAX_TO_FREIGHT_FACTOR = 85; //This number is open for discussion
+    PAX_LOAD_FACTOR = 80; //This number is open for discussion
 
-    KM_PER_HOUR = [842, 0, 0]; ////The position in this array corresponds to LIST_OF_PLANES. Enter the cruise speed of the aircraft
+    PAX_TO_FREIGHT_FACTOR = 96; //This number is open for discussion
+
+    KM_PER_HOUR = [842, 828, 0]; ////The position in this array corresponds to LIST_OF_PLANES. Enter the cruise speed of the aircraft
     KM_PER_HOUR_OTHER = 850;
 
 
@@ -30,7 +31,7 @@ class Database {
     }
 
     getListOfDistanceAsKm(index) {
-        return this.LIST_OF_DISTANCE * 1.852;
+        return this.LIST_OF_DISTANCE[index] * 1.852;
     }
 
     getFuelConsumption(flightType, flightTime) {
@@ -39,15 +40,18 @@ class Database {
         let currentNum;
         let closestIndex;
         for (let i = 0; i < this.LIST_OF_DISTANCE.length; i++) {
-            currentNum = flightTime*this.KM_PER_HOUR[a] - this.getListOfDistanceAsKm(i);
+            let KM = this.getKMPerHour(a);
+            let dist = this.getListOfDistanceAsKm(i);
+            currentNum = (flightTime/60)*KM - dist;
             currentNum = Math.abs(currentNum);
             if (currentNum < closestNum || i == 0) {
                 closestNum = currentNum;
-                closestIndex = i;
+                closestIndex = i -1;//-1 for adjusting the number. THIS MIGHT CHANGE
+                console.log("index"+closestIndex);
             }
         }
 
-        if (a != null) {
+        if (a != -1) {
             return this.FUEL_CONSUMPTION[a][closestIndex];
         } else {
             return this.getFuelConsumptionOther(flightTime);
@@ -59,11 +63,13 @@ class Database {
         let currentNum;
         let closestIndex;
         for (let i = 0; i < this.LIST_OF_DISTANCE.length; i++) {
-            currentNum = flightTime*this.KM_PER_HOUR[a] - this.getListOfDistanceAsKm(i);
+            let KM = this.getKMPerHourOther();
+            let dist = this.getListOfDistanceAsKm(i);
+            currentNum = (flightTime/60)*KM - dist;
             currentNum = Math.abs(currentNum);
             if (currentNum < closestNum || i == 0) {
                 closestNum = currentNum;
-                closestIndex = i;
+                closestIndex = i -1; //-1 for adjusting the number. THIS MIGHT CHANGE
             }
         }
         return this.FUEL_CONSUMPTION_OTHER[closestIndex];
@@ -71,10 +77,10 @@ class Database {
 
     getNumberOfYSeats(flightType) {
         let a = this.LIST_OF_PLANES.indexOf(flightType);
-        if (a != null) {
+        if (a != -1) {
             return this.NUMBER_OF_Y_SEATS[a];
         } else {
-            this.getNumberOfYSeatsOther();
+            return this.getNumberOfYSeatsOther();
         }
     }
 
@@ -93,16 +99,14 @@ class Database {
 
     getKMPerHour(flightType) {
         let a = this.LIST_OF_PLANES.indexOf(flightType);
-        if (a != null) {
+        if (a != -1) {
             return this.KM_PER_HOUR[a];
         } else {
-            this.getKMPerHourOther()
+           return this.getKMPerHourOther()
         }
     }
 
     getKMPerHourOther() {
         return this.KM_PER_HOUR_OTHER;
     }
-
-
 }
