@@ -98,21 +98,30 @@
     color: black;
     font-size: 2.1em;
     font-weight: bold;
-    font-family: Arial, Verdana;
+    font-family: Momondo font, Times New Roman;
 
     /* laver en border med afrundede kanter*/
     border-radius: 5px;
     z-index: 1001;
 }
 
+@font-face {
+    font-family: "Momondo font";
+    font-style: normal;
+    font-weight: 700;
+    src: url("chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/font/Cera Pro Bold.otf") format('opentype');
+}
+
+
 .barAttributes:hover .textBox .CO2-print {
+    font-family: Momondo font, Times New Roman;
     position: absolute;
     border-radius: 5px;
-    margin-left: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
     width: auto;
     height: auto;
-    background: #e8a41d;
-    font-size: 0.5em;
+    font-size: 0.4em;
 
 }
 

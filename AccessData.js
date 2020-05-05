@@ -58,16 +58,6 @@ class AccessData {
     }
 
 
-    resultWrapperFlightType(num ) {
-        let wrapper = document.getElementsByClassName("resultWrapper")[num];
-
-        for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
-            let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
-            let split = planeType.innerText.split("·");
-            this.flightType.push(split[2]);
-        }
-    }
-
     getWrapperFlightTypeAsString() {
         let flightTypeString = this.flightType.toString();
         return flightTypeString;

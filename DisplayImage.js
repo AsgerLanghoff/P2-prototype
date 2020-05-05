@@ -55,16 +55,15 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
                 '<div class="barAttributes">' +
 
-                '<img src="chrome-extension://fjjeajoinafajkcnmaimnejkkkfimohk/data/bar.png" alt="test bar" class = "showBar"</img>' +
-
+                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
 
                 '<div class="triangle-left"></div>' +
 
                 '<div class="textBox" id="textBox">' +
 
-                '<p> Indsæt lang tekst her det er mega fedt</p>' +
+                //'<p> Indsæt lang tekst her det er mega fedt mere tekst hahahi</p>' +
 
-                '<div class="CO2-print" id="CO2-print" </div>' +
+               '<div class="CO2-print" id="CO2-print" </div>' +
 
                 '</div>'+
                 //'</div>' +

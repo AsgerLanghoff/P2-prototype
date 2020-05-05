@@ -7,10 +7,10 @@
     "Content.js",
     "background.js",
     "data/logo.png",
-    "logo(1).jpg",
     "data/cssFile.css",
     "data/bar.png",
-    "data/aplus.png",
+    "font/FontsFree-Net-cor2.ttf",
+    "font/Cera Pro Bold.otf",
     "data/hoverStyle.css"
   ],
   "permissions": [

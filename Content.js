@@ -9,20 +9,15 @@
     '<div id="popup" style="display: none">billede </div>');
 
 */
-function showText(something, string) {
+function showText(something, string) { //something = co2-tallet
     let div = document.getElementById(string);
     console.log("div= " + div);
-    div.innerHTML = something;
+    div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
 
 
 $(function () {
     setTimeout(function () {
-
-
-        //let a = accessData.resultWrapperFlightTime(4);
-        let calculator = new CO2calculator();
-
 
         let displayImage = new DisplayImage();
         //var emissionArray = new Array();
