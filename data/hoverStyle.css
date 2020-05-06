@@ -109,7 +109,7 @@
     font-family: "Momondo font";
     font-style: normal;
     font-weight: 700;
-    src: url("chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/font/Cera Pro Bold.otf") format('opentype');
+    src: url("chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/font/Cera Pro Bold.otf");
 }
 
 
