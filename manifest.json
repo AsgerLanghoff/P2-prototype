@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "testertester",
+  "name": "Green Skies",
   "version": "0.1",
   "web_accessible_resources": [
     "icon.png",
@@ -8,10 +8,12 @@
     "background.js",
     "data/logo.png",
     "logo(1).jpg",
+    "cogwheel.png",
     "data/cssFile.css",
     "data/bar.png",
     "data/aplus.png",
-    "data/hoverStyle.css"
+    "data/hoverStyle.css",
+    "data/dropDown.css"
   ],
   "permissions": [
     "webRequest",

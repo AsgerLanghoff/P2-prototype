@@ -1,0 +1,111 @@
+body {
+    width: 350px;
+    height: 500px;
+    margin: 0;
+}
+
+header {
+    height: 10%;
+    text-align: center;
+    background: #ffffff;
+}
+
+header img {
+    height: 50px;
+}
+
+header h1 {
+}
+
+img {
+    vertical-align: middle;
+}
+
+main {
+    height: 83%;
+}
+
+footer {
+    height: 7%;
+    background: #f2f2f2;
+
+}
+
+footer img {
+    height: 10%;
+    width: 10%;
+    float: right;
+}
+
+footer p {
+
+}
+
+ hr {
+     display: block;
+     width: 350%;
+     border: 0;
+     border-top: 1px solid #c4c4c4;
+     padding: 0;
+ }
+
+ .toggle input {
+     display: none;
+ }
+
+ .toggle {
+     font-size: small;
+     top: 6px;
+     left: 5px;
+     position: relative;
+     display: inline-block;
+     width:  40px;
+     height: 24px;
+ }
+
+ .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: #d0d5d9;
+     border: 0px;
+     border-radius: 20px;
+     transition: all 0.4s;
+ }
+
+ .slider:before {
+     position: absolute;
+     content: "";
+     width: 20px;
+     height: 20px;
+     left: 2px;
+     top: 2px;
+     bottom: 2px;
+     background-color: #ffffff;
+     border-radius: 30px;
+     transition: all 0.4s;
+ }
+
+ .slider:after {
+     position: absolute;
+     content: "Disabled";
+     top: 2px;
+     left: 45px;
+     color: #000000;
+ }
+
+ input:checked + .slider{
+     background-color: #77b06d;
+ }
+
+ input:checked + .slider:before{
+     transform: translateX(15px);
+ }
+
+ input:checked + .slider:after {
+     content: "Enabled";
+     left: 45px;
+ }
