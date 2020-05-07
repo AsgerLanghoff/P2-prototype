@@ -9,11 +9,13 @@
     "data/logo.png",
     "logo(1).jpg",
     "cogwheel.png",
+    "data/aplus.png",
+    "data/dropDown.css",
     "data/cssFile.css",
     "data/bar.png",
-    "data/aplus.png",
-    "data/hoverStyle.css",
-    "data/dropDown.css"
+    "font/FontsFree-Net-cor2.ttf",
+    "font/Cera Pro Bold.otf",
+    "data/hoverStyle.css"
   ],
   "permissions": [
     "webRequest",
@@ -37,7 +39,8 @@
         "CO2calculator.js",
         "AccessData.js",
         "DisplayImage.js",
-        "DropDownMenu.js"
+        "DropDownMenu.js",
+        "Database.js"
       ]
     }
   ],
@@ -56,36 +59,7 @@
       "background.js",
       "data/logo.png",
       "logo(1).jpg"
-    ],
-    "permissions": [
-      "webRequest",
-      "webRequestBlocking",
-      "<all_urls>"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
-          "*://*.momondo.dk/*"
-        ],
-        "js": [
-          "jquery-3.5.0.min.js",
-          "Content.js",
-          "CO2calculator.js",
-          "AccessData.js",
-          "tester.js"
-        ]
-      }
-    ],
-    "browser_action": {
-      "default_icon": "icon.png"
-    },
-    "background": {
-      "scripts": [
-        "jquery-3.5.0.min.js",
-        "Content.js",
-        "background.js"
-      ],
-      "persistent": true
-    }
+    ]
+
   }
 }

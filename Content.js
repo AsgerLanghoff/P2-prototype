@@ -9,33 +9,52 @@
     '<div id="popup" style="display: none">billede </div>');
 
 */
-function showText(something, string) {
+function showText(something, string) { //something = co2-tallet
     let div = document.getElementById(string);
     console.log("div= " + div);
-    div.innerHTML = something;
+    div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
-
-
 
 
 $(function () {
     setTimeout(function () {
 
-        //let a = accessData.resultWrapperFlightTime(4);
+        let displayImage = new DisplayImage();
+        //var emissionArray = new Array();
+        displayImage.displayBar();
 
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+            let calc = new CO2calculator(i);
+           // emissionArray.push(calc);
+            //emissionArray[i].calculator(i);
+            showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
+
+        }
+
+
+
+
+
+
+
+
+        //let a = accessData.resultWrapperFlightTime(4);
+/*
         let displayImage = new DisplayImage();
         displayImage.displayBar();
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let accessData = new AccessData();
-            accessData.resultWrapperFlightTime(i);
-            showText(accessData.getWrapperTimeAsString(), "resultWrapper" + i);
+            showText(calculator.calculator(accessData.resultWrapperFlightType(i), accessData.resultWrapperFlightTime(i), i), "resultWrapper" + i);
         }
 
 
         // accessData.setFlightType();
         //accessData.setFlightTime();
 
-    }, 0);
+
+
+*/
+    }, 5000);
 });
 
 

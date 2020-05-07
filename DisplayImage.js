@@ -57,21 +57,19 @@ class DisplayImage {
 
                 '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
 
-
                 '<div class="triangle-left"></div>' +
 
                 '<div class="textBox" id="textBox">' +
 
-                '<span> Indsæt lang tekst her det er mega fedt</span>' +
+                //'<p> Indsæt lang tekst her det er mega fedt mere tekst hahahi</p>' +
 
-                '<div class="CO2-print" id="CO2-print" </div>' +
+               '<div class="CO2-print" id="CO2-print" </div>' +
 
                 '</div>'+
                 //'</div>' +
                 //'</div>' +
 
                 '</div>');
-
 
 
             document.getElementById("CO2-print").id = "resultWrapper" + i;
