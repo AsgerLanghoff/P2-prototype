@@ -1,11 +1,29 @@
 body {
     width: 350px;
-    height: 500px;
+    height: auto;
     margin: 0;
+    overflow: scroll;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 8px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #555555;
 }
 
 header {
-    height: 10%;
+    height: 55px;
     text-align: center;
     background: #ffffff;
 }
@@ -22,33 +40,43 @@ img {
 }
 
 main {
-    height: 83%;
+    height: auto;
 }
 
-footer {
-    height: 7%;
-    background: #f2f2f2;
-
+main h4 {
+    position: relative;
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 footer img {
-    height: 10%;
-    width: 10%;
-    float: right;
+    padding: 8px;
+    width: 30%;
+    height: auto;
 }
 
-footer p {
-
+footer {
+    height: 35px;
+    background: #f2f2f2;
 }
 
- hr {
+hr {
      display: block;
-     width: 350%;
+     width: 100%;
      border: 0;
      border-top: 1px solid #c4c4c4;
      padding: 0;
- }
+}
 
+ul {
+    list-style: disc;
+}
+
+/* This is the CSS styling for the scrollbar */
+
+
+/* This is the CSS styling for the disabled/enabled toggler */
  .toggle input {
      display: none;
  }
@@ -109,3 +137,44 @@ footer p {
      content: "Enabled";
      left: 45px;
  }
+
+ /* This is for the CSS styling for the tabs */
+.accordion {
+    position: relative;
+    background-color: #ffffff;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #f2f2f2;
+}
+
+.accordion:after {
+    content: '\002B';       /* The code for the + icon */
+    color: #777;
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.active:after {
+    content: "\2212";       /* the code for the - icon */
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

@@ -36,7 +36,8 @@
         "Content.js",
         "CO2calculator.js",
         "AccessData.js",
-        "DisplayImage.js"
+        "DisplayImage.js",
+        "DropDownMenu.js"
       ]
     }
   ],

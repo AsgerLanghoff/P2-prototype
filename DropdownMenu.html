@@ -1,37 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>      <!-- This is where everything will be loaded, not the same as header -->
     <meta charset="UTF-8">
     <title>GreenSkies</title>
     <link href="data/dropDown.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
 
+
 <header>
-    <div class="header">
-        <h1> <img src="data/logo.png">  GreenSkies</h1>
-    </div>
+    <h1> <img src="data/logo.png">  GreenSkies</h1>
 </header>
 
-<hr style="width: 90%">
+<hr style="width: 80%; padding: 3px">
 
 <main>
-    <p>Hej med dig jeg hedder bøøørge</p>
+    <h3 style="margin-left: 20px">Velkommen til GreenSkies</h3>
+    <h4> Denne udvidelse til din browser giver dig nem og hurtig adgang til at se hvor meget dine flyrejser påvirker miljøet.</h4>
+    <h4> Du kan se disse CO<sub>2</sub> udledelser ud fra de forskellige flyrejser på <a style="text-decoration: none; color: #777" href="https://www.momondo.dk" target="_blank">momondo.dk.</a></h4>
+
+
+
+
+    <h4 style="text-align: right"> Vi håber at du tager det miljørigtige valg <br> God rejse!</h4>
+
 </main>
 
-<hr style="margin: 0">
+<hr style="width: 80%; padding: 3px">
 
-<footer>
-    <div class="footer">
+<div>
 
-        <label class="toggle" style="font-weight: bolder">
-            <input type="checkbox">
-            <span class="slider"></span>
-        </label>
-
-        <a href="http://www.google.dk" target="_blank"><img src="data/cogwheel.png" alt="cogwheel"> </a>
+    <div style="margin-left: 20px; text-align: left">
+        <h3>Ofte stillede spørgsmål</h3>
     </div>
-</footer>
+
+    <button class="accordion">Hvordan bliver CO<sub>2</sub> tallene udregnet?</button>
+    <div class="panel">
+        <p>Tallene bliver beregnet med <a style="text-decoration: none; color: royalblue" href="https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx" target="_blank">ICAO beregneren</a>
+            for flyrejser kombineret med rejsetider og afstande fra momondo hjemmesiden.<br></p>
+
+        <p style="text-align: center">Oversigt af metodologien:</p>
+
+        <p> CO<sub>2</sub> udledning per passager tager udgangspunkt i belastningsfaktoren og er kun baseret på passager operationer (dvs. brændstofforbrænding forbundet med mavefragt betragtes ikke).</p>
+
+        <p style="text-align: center">Trinene til beregning af CO<sub>2</sub>-udledelser pr. Passager:</p>
+
+        <p><ol>
+        <li>Estimation af flyets Brændstofforbrænding.</li>
+        <br>
+        <li>Beregning af passagerernes brændstofforbrænding baseret på en passager &#x2215; fragtfaktor, der stammer fra RTK-data.</li>
+        <br>
+        <li>Beregning af besatte sæder (antagelse: alle fly er helt konfigureret med økonomiske sæder). Sæde besat &#x3d; Samlede pladser &#xd7; Belastningsfaktor.</li>
+        <br>
+        <li>CO<sub>2</sub>-udledelser pr. Passager &#x3d; (passagerers brændstofforbrænding &#xd7; 3.16) &#x2215; Sæde besat.</li></ol>
+
+        <p>Bemærk: for flyvninger over 3000 km, CO<sub>2</sub>-udledelser pr. Passager i premiumhytte &#x3d; 2 &#xd7; CO<sub>2</sub>-udledelser pr. passager i økonomi.
+        </p>
+    </div>
+
+    <button class="accordion">Hvor meget er et ton CO<sub>2</sub>?</button>
+    <div class="panel">
+        <p> At putte CO<sub>2</sub> i sammenhæng hjælper ofte med at give en bedre forståelse af hvor meget disse tal betyder.</p>
+        <p style="text-align: center">Nogle eksempler på hvor meget et ton CO<sub>2</sub> svare til:</p>
+
+        <p> Det gennemsnitlige udledning af en enkelt passager på en returrejse fra Paris til New York </p>
+        <p><ul>
+        <li> At køre 6000 km med en diesel bil.</li>
+        <br>
+        <li> 4300 kWh strømforbrug. </li></ul>
+
+            Derudover har EU’s Ministerråd fastslået at en person maks må udlede et ton (2000kg) CO<sub>2</sub> per år i 2050 i kampen mod global opvarmning.
+        </p>
+    </div>
+
+    <button class="accordion">Hvor pålidelig og troværdige er tallene?</button>
+    <div class="panel">
+        <p>Alle tal beregnet med denne udviddelse tager udgangspunkt i <a style="text-decoration: none; color: royalblue" href="https://www.icao.int/environmental-protection/Carbonoffset/Pages/default.aspx" target="_blank">ICAO International Civil Aviation Organization lommeregneren</a>.</p>
+
+        <p> ICAO er et FN-specialiseret agentur oprettet af stater i 1944 for at styre administrationen og styringen af konventionen om international civil luftfart.</p>
+
+        <p> Nogle tal er ikke til rådighed for at opfylde hele beregningen fra start til slut, herunder: passager til fragtfaktor og belastningsfaktor - Hvordan de bliver grupperet
+            og hvor stor en procentdel bagage der bliver benyttet. Disse værdier bruger i stedet for gennemsnitlige tal for at formindske påvirkningen på de endelige resultater. </p>
+
+        <p> Derudover beregnes der også med at flyrejsen flyver i cruise-hastighed hele turen, hvor at der normalt vil være nogle variationer. <br>
+            Dette betyder at brændstofforbrændingen er estimeret og i beregningen faktisk bliver rundet en lille smule ned.
+        </p>
+    </div>
+
+    <button class="accordion">Hvordan påvirker CO<sub>2</sub> miljøet?</button>
+    <div class="panel">
+        <p> CO<sub>2</sub> spiller en vigtig rolle i vores økosystem, både i planteliv og at holde jorden varm, men forøgning af udledning af CO<sub>2</sub> i atmosfæren er forbundet med global opvarmning.</p>
+
+        <p> For høj udledning af CO<sub>2</sub> i atmosfæren forøger drivhuseffekten på jorden. Dette gør forøger jordens temperatur. Denne fangede varme fører til smeltende iskapper og stigende havniveauer, der forårsager oversvømmelser.</p>
+
+        <p> Brændbare fossile brændstoffer som kul, kraftværksgas, olie, transport og storindustri er den største kilde til kuldioxid.
+            Det er en konsekvens der i sidste ende rammer alle på planeten, og det er derfor vigtigt at man er opmærksom på sin flyrejse og dens indflydelse på miljøet for at skabe en bedre fremtid.
+        </p>
+    </div>
+
+</div>
+
+<hr style="margin: 0px;">
 
 </body>
+
+<script src="DropDownMenu.js"></script>
+
 </html>
