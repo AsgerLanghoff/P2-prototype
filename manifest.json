@@ -10,7 +10,7 @@
     "logo(1).jpg",
     "cogwheel.png",
     "data/aplus.png",
-    "data/dropDown.css"
+    "data/dropDown.css",
     "data/cssFile.css",
     "data/bar.png",
     "font/FontsFree-Net-cor2.ttf",
@@ -39,7 +39,7 @@
         "CO2calculator.js",
         "AccessData.js",
         "DisplayImage.js",
-        "DropDownMenu.js"
+        "DropDownMenu.js",
         "Database.js"
       ]
     }
