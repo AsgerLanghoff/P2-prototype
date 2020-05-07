@@ -28,28 +28,40 @@ class AccessData {
             }
         }
         for (let i = 0; i < this.wrapperTime.length; i++) {
-            console.log(this.wrapperTime[i]);
+         //   console.log(this.wrapperTime[i]);
         }
         //return wrapperTime;
     }
 
+
     getWrapperTimeAsString() {
-        let stringTime = this.wrapperTime.toString();
+        let stringTime = this.wrapperType.toString();
         return stringTime;
     }
 
 
     resultWrapperFlightType(num ) {
-        let wrapper = document.getElementsByClassName("resultWrapepr")[num];
+        let wrapper = document.getElementsByClassName("resultWrapper")[num];
         for(let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
             let planeType = wrapper.getElementsByClassName("planeDetails details-subheading")[i];
-            let split = y.innerText.split("·");
+            let split = planeType.innerText.split("·");
             this.flightType.push(split[2]);
         }
     }
 
+    getOneFlightType(index){
+        return this.flightType[index];
+    }
 
-    getWrapperFlightTypeAsString() {}
+    getOneFlightTime(index){
+        return this.wrapperTime[index];
+    }
+
+
+    getWrapperFlightTypeAsString() {
+        let flightTypeString = this.flightType.toString();
+        return flightTypeString;
+    }
 
 
 
