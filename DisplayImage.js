@@ -51,6 +51,7 @@ class DisplayImage {
             //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
             $(".resultWrapper").css("overflow", "visible");
 
+
             //Here, we find the first instance of ".left-column" and appends some HTML code.
             $(e).find(".left-column").first().append(
                 '<div class="barAttributes">' +
@@ -61,24 +62,49 @@ class DisplayImage {
 
                 '<div class="textBox" id="textBox">' +
 
-                //'<p> Indsæt lang tekst her det er mega fedt mere tekst hahahi</p>' +
 
-               '<div class="CO2-print" id="CO2-print" </div>' +
+                '<p class="textFormat">Denne rejse udleder <span class="CO2-print" id="CO2-print"></span> </p>' +
+                //'<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar2" class = "hoverBar" </img>' +
 
-                '</div>'+
-                //'</div>' +
-                //'</div>' +
-
+                '</div>' +
                 '</div>');
 
 
-            document.getElementById("CO2-print").id = "resultWrapper" + i;
-        }
-        for (let i = 0 ; i < document.getElementsByClassName("resultWrapper").length; i++) {
-        }
-    }
-    setAlignement(alignement) {
-        this.stylingWidth = alignement;
-    }
+            }
 
+            for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+                document.getElementById("CO2-print").id = "resultWrapper" + i;
+        }
+
+    }
 }
+
+/*
+$(e).find(".left-column").first().append("HoverBox.html");
+'<div class="barAttributes">' +
+
+'<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
+
+'<div class="triangle-left"></div>' +
+
+'<div class="textBox" id="textBox">' +
+
+'<h3 </div>'+
+
+
+//'<div class="CO2-print" id="CO2-print" </div>' +
+//'<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar2" class = "hoverBar" </img>' +
+
+
+'</div>' +
+
+
+'</div>');
+
+
+document.getElementById("CO2-print").id = "resultWrapper" + i;
+}
+for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+}
+}
+ */
