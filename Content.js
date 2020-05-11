@@ -29,6 +29,8 @@ $(function () {
            // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
+            testResults.sort((a,b)=>a-b);
+            console.log(testResults);
 
         }
 
