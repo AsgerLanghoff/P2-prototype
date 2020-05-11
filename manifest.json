@@ -1,12 +1,16 @@
 {
   "manifest_version": 2,
-  "name": "testertester",
+  "name": "Green Skies",
   "version": "0.1",
   "web_accessible_resources": [
     "icon.png",
     "Content.js",
     "background.js",
     "data/logo.png",
+    "logo(1).jpg",
+    "cogwheel.png",
+    "data/aplus.png",
+    "data/dropDown.css",
     "data/cssFile.css",
     "data/bar.png",
     "font/FontsFree-Net-cor2.ttf",
@@ -37,6 +41,7 @@
         "CO2calculator.js",
         "AccessData.js",
         "DisplayImage.js",
+        "DropDownMenu.js",
         "Database.js"
       ]
     }
