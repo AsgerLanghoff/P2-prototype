@@ -140,6 +140,7 @@ ul {
 
  /* This is for the CSS styling for the tabs */
 .accordion {
+
     position: relative;
     background-color: #ffffff;
     color: #444;
@@ -154,7 +155,7 @@ ul {
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
-    background-color: #f2f2f2;
+    background-color: #f4f4f4;
 }
 
 .accordion:after {
@@ -172,8 +173,9 @@ ul {
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
+    font-size: 13px;
     padding: 0 18px;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;

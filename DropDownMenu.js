@@ -12,7 +12,3 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
-
-function myFunction() {
-    document.getElementById("test").innerHTML = "Hej";
-}
