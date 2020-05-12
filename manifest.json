@@ -13,11 +13,9 @@
     "data/dropDown.css",
     "data/cssFile.css",
     "data/bar.png",
-    "font/FontsFree-Net-cor2.ttf",
-    "font/Cera Pro Bold.otf",
     "data/hoverStyle.css",
-    "font/CeraPro-Bold.tff",
     "HoverBox.html"
+
   ],
   "permissions": [
     "webRequest",

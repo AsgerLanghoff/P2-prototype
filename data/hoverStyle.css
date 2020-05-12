@@ -3,7 +3,6 @@
 .barAttributes {
     position: absolute;
 
-    /*background: #6fce1d; /* farve på div element, skal fjernes senere, fungerer som hitbox */
 
     /* width og height på hit-boxen */
     height: 15px;
@@ -30,17 +29,18 @@
     height: 5px;
     width: 100%;
 
-
     /* laver en border der afrunder hjørner*/
     border-radius: 5px;
 }
 
 .showBarInside {
-    position: absolute;
-    margin-top: 5px;
-    height: 5px;
-    width: 80%;
-    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    padding-top: 15%;
+    padding-bottom: 2%;
+
 }
 
 .triangle-left {
@@ -57,17 +57,13 @@
 
 /* laver en box med size 0x0 */
 .textBox {
-    position: absolute;
-    margin-top: 0px;
-    top: -45px;
+    display: none;
 
     /* mellemrum tilvenstre for. højere left-værdi = placerer boksen mere til venstre */
     left: 160px;
 
-
     font-size: 0em;
 
-    box-shadow:0px 0px 0px black;
     float: left;
     width: 0px;
     height: 0px;
@@ -75,7 +71,7 @@
 
 .hoverBar{
     position: absolute;
-width: 0px;
+    width: 0px;
     height: 0px;
 }
 
@@ -95,78 +91,88 @@ width: 0px;
     margin-top: -2px;
     left: 140px;
     border-top: 10px solid transparent;
-    border-right: 20px solid #c4c4c4;
+    border-right: 20px solid #d9d9d9;
     border-bottom: 10px solid transparent;
 }
 
 
 /* ændrer textBox når der bliver hoveret over bar */
 .barAttributes:hover .textBox {
-    /*width og height af textbox */
+    margin-top: 0px;
+    top: -45px;
+    display: block;
+    box-sizing: border-box;
     width: 500px;
     height: 350px;
-
     background: #d9d9d9;
 
-    /*tekst attributes*/
-    color: black;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: "Momondo font", "Arial Black";
-    box-shadow:1px 1px 10px black;
 
     /* laver en border med afrundede kanter*/
     border-radius: 5px;
     z-index: 1001;
 }
 
-@font-face {
-    font-family: "Momondo font";
-    font-style: normal;
-    font-weight: 700;
-    src: url('chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/font/CeraPro-Bold.ttf');
-}
 
+.barAttributes:hover #textFormat {
 
-.barAttributes:hover .textBox .CO2-print {
-    font-family: "Momondo font", "Arial";
+    font-size: x-large;
+    text-align: center;
     font-weight: bold;
-    font-size: large;
-    color: #e8a41d;
-    position: relative;
-    border-radius: 5px;
-    margin-top: 0px;
-    margin-left: 5px;
-    width: auto;
-    height: auto;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin: auto;
+
+}
+.barAttributes:hover .CO2-print {
+
+     font-size: 40px;
+     color: #e8a41d;
+ }
+
+.barAttributes:hover .textBoxDescription{
+    color: black;
+    font-size: small;
+    display: block;
+    font-weight: lighter;
+    padding-top: 0px;
+    padding-bottom: 10px;
+    width: 90%;
+    margin: auto;
+}
+.barAttributes:hover .leftColumn{
+    color: black;
+    font-size: small;
+    display: inline-block;
+    font-weight: lighter;
+    padding-left: 5%;
+    float: left;
+
+}
+.barAttributes:hover .rightColumn{
+    color: black;
+    font-size: small;
+    display: inline-block;
+    font-weight: lighter;
+    padding-right: 5%;
+    float: right;
 }
 
-.barAttributes:hover .textBox .textFormat {
-    font-family: "Momondo font", "Arial";
-    color: #000000;
-    position: absolute;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-left: 10px;
-    width: auto;
-    height: auto;
-}
-
-.barAttributes:hover .textBox .hoverBar{
+/*.barAttributes:hover .textBox .hoverBar{
     width: 100px;
     height: 5px;
     margin-top: 20px;
     margin-left: 10px;
+}*/
 
-}
-
-hr {
-    position: center;
+.barAttributes:hover hr {
     display: block;
-    width: 100%;
+    align-content: center;
+    width: 90%;
     border: 0;
     border-top: 2px solid #ccc;
-    padding: 0px;
-    margin: 0px;
+    height: 2px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
 }
 
