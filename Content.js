@@ -31,14 +31,14 @@ $(function () {
 
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let oneCalc = new CO2calculator(i);
-            calc.push(oneCalc);
+            //calc.push(oneCalc);
            // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
         }
 
         sortedResults = testResults.sort((a,b)=>a-b);
-        console.log(testResults);
+        console.log(sortedResults);
 
         for (let i = 0; i < calc.length; i++) {
             for(let j = 0; j < sortedResults.length; j++) {
@@ -47,6 +47,7 @@ $(function () {
                 }
             }
         }
+        console.log(indexOfSortedResults);
 
 
 

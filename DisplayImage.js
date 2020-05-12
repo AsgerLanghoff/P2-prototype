@@ -39,6 +39,9 @@ class DisplayImage {
     displayBar() {
         // $(".resultWrapper").css("overflow", "visible"); //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
         console.log("det virker");
+        var picpointer = chrome.runtime.getURL("pointer.png");
+        console.log("pointer:" + picpointer);
+        console.log("bar:" + chrome.runtime.getURL("bar.png"));
 
         //elemnets is an array that can be used to show the amounts of resultwrappers with the .length command(used in the "for"loop)
         const elements = document.getElementsByClassName("resultWrapper");
@@ -56,18 +59,18 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
                 '<div class="barAttributes">' +
 
-                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
+
+                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/pointer.png" alt="pointer" class = "showPointer"</img>' +
+
 
                 '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
+
 
                 '<div class="triangle-left"></div>' +
 
                 '<div class="textBox" id="textBox">' +
 
-                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="arrow" class = "showBar"</img>' +
-
                 '<p class="textFormat">Denne rejse udleder <span class="CO2-print" id="CO2-print"></span> </p>' +
-                //'<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar2" class = "hoverBar" </img>' +
 
                 '</div>' +
                 '</div>');
