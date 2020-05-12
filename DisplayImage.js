@@ -62,6 +62,7 @@ class DisplayImage {
 
                 '<div class="textBox" id="textBox">' +
 
+                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="arrow" class = "showBar"</img>' +
 
                 '<p class="textFormat">Denne rejse udleder <span class="CO2-print" id="CO2-print"></span> </p>' +
                 //'<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar2" class = "hoverBar" </img>' +
