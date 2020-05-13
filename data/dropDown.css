@@ -1,3 +1,6 @@
+/* CSS styling fil for alt det HTML kode i "DropDownMenu.html" */
+
+/* De globale CSS værdier som bliver givet til "body" */
 body {
     width: 350px;
     height: auto;
@@ -5,44 +8,29 @@ body {
     overflow: scroll;
 }
 
-body::-webkit-scrollbar {
-    width: 8px;
-}
-
-body::-webkit-scrollbar-track {
-    background: #ffffff;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #888888;
-    border-radius: 8px;
-}
-
-body::-webkit-scrollbar-thumb:hover {
-    background: #555555;
-}
-
+/* De globale CSS værdier for alle ting i header */
 header {
     height: 55px;
     text-align: center;
     background: #ffffff;
 }
 
+/* De globale CSS værdier for alle img i header */
 header img {
     height: 50px;
 }
 
-header h1 {
-}
-
+/* De globale værdier for alle img */
 img {
     vertical-align: middle;
 }
 
+/* De globale værdier for main */
 main {
     height: auto;
 }
 
+/* De globale værdier for h4 tekst som bliver brugt i main */
 main h4 {
     position: relative;
     text-align: left;
@@ -50,17 +38,7 @@ main h4 {
     margin-right: 20px;
 }
 
-footer img {
-    padding: 8px;
-    width: 30%;
-    height: auto;
-}
-
-footer {
-    height: 35px;
-    background: #f2f2f2;
-}
-
+/* De globale værdier for alle linjer */
 hr {
      display: block;
      width: 100%;
@@ -69,78 +47,36 @@ hr {
      padding: 0;
 }
 
+/* De globaler værdier for UL (unordered list) */
 ul {
     list-style: disc;
 }
 
 /* This is the CSS styling for the scrollbar */
+/* De globale CSS værdier som bliver givet til body med henblik på -webkit-scrollbar */
+body::-webkit-scrollbar {
+    width: 8px;
+}
 
+/* De globale CSS værdier som bliver givet til body med henblik på -webkit-scrollbar-track */
+body::-webkit-scrollbar-track {
+    background: #ffffff;
+}
 
-/* This is the CSS styling for the disabled/enabled toggler */
- .toggle input {
-     display: none;
- }
+/* De globale CSS værdier som bliver givet til body med henblik på -webkit-scrollbar-thumb */
+body::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 8px;
+}
 
- .toggle {
-     font-size: small;
-     top: 6px;
-     left: 5px;
-     position: relative;
-     display: inline-block;
-     width:  40px;
-     height: 24px;
- }
+/* De globale CSS værdier som bliver givet til body med henblik på -webkit-scrollbar-thumb:hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
 
- .slider {
-     position: absolute;
-     cursor: pointer;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     background: #d0d5d9;
-     border: 0px;
-     border-radius: 20px;
-     transition: all 0.4s;
- }
-
- .slider:before {
-     position: absolute;
-     content: "";
-     width: 20px;
-     height: 20px;
-     left: 2px;
-     top: 2px;
-     bottom: 2px;
-     background-color: #ffffff;
-     border-radius: 30px;
-     transition: all 0.4s;
- }
-
- .slider:after {
-     position: absolute;
-     content: "Disabled";
-     top: 2px;
-     left: 45px;
-     color: #000000;
- }
-
- input:checked + .slider{
-     background-color: #77b06d;
- }
-
- input:checked + .slider:before{
-     transform: translateX(15px);
- }
-
- input:checked + .slider:after {
-     content: "Enabled";
-     left: 45px;
- }
-
- /* This is for the CSS styling for the tabs */
+/* This is for the CSS styling for the tabs */
+/* Specific CSS styling for the class .accordion */
 .accordion {
-
     position: relative;
     background-color: #ffffff;
     color: #444;
@@ -158,10 +94,11 @@ ul {
     background-color: #f4f4f4;
 }
 
+/* CSS styling for the accordion after it is clicked or activated */
 .accordion:after {
     content: '\002B';       /* The code for the + icon */
-    color: #777;
-    font-weight: bold;
+    color: #777;        /* This code changes the font colour of the title in each accordion panel */
+    font-weight: bolder;
     float: left;
     margin-left: 5px;
     margin-right: 10px;
@@ -176,6 +113,7 @@ ul {
     font-size: 13px;
     padding: 0 18px;
     background-color: #f4f4f4;
+    font-weight: bold;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;

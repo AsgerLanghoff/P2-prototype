@@ -1,5 +1,4 @@
-/* ændrer på baren */
-
+/* Ændrer på baren som bliver vist ved selve rejsen */
 .barAttributes {
     position: absolute;
 
@@ -16,10 +15,22 @@
 
     cursor: pointer;
 }
+
+/* Ændrer på informations ikonet vist ved siden af baren */
+.informationIcon {
+    position: absolute;
+    height: auto;
+    width: 15px;
+    z-index: 100;
+    left: 97%;
+    top: 14px;
+}
+
+/* Ændrer på den pointer som er vist på baren ved rejsen */
 .showPointer {
     position: absolute;
     z-index: 100;
-    top: -10px;
+    top: -4px;
 
 
     margin-top: 0;
@@ -33,11 +44,12 @@
     left:0%;
 
     box-shadow:0px 0px 0px black;
-    height: 22px;
+    height: 18px;
     width: 10px;
 
 }
 
+/* Ændrer på den pointer som er vist på baren inde i selve hover menuen */
 .showPointerInner {
     position: absolute;
     z-index: 100;
@@ -65,6 +77,7 @@
     border-radius: 5px;
 }
 
+/* Diverse CSS stylings for baren inde på hover menuen */
 .showBarInside {
     display: block;
     margin-left: auto;
@@ -107,13 +120,11 @@
     height: 0px;
 }
 
-
+/* Giver en shadow til selve baren på rejsen når man hover over den */
 .barAttributes:hover .showBar {
     /* skygge på baren når man hover + farven*/
     box-shadow:1px 1px 10px #0025b3;
 }
-
-
 
 
 .barAttributes:hover .triangle-left {
@@ -129,7 +140,7 @@
 }
 
 
-/* ændrer textBox når der bliver hoveret over bar */
+/* CSS stylings for den boks som bliver vist når man aktivere hover menuen */
 .barAttributes:hover .textBox {
     margin-top: 0px;
     top: -55px;
@@ -147,32 +158,35 @@
 
 
 .barAttributes:hover #textFormat {
-
     font-size: x-large;
     text-align: center;
     font-weight: bolder;
     padding-top: 15px;
     padding-bottom: 10px;
     margin: auto;
-
 }
-.barAttributes:hover .CO2-print {
 
+/* CSS styling for diverse ting der bliver anvendt på CO2 tallet i titlen i hover menuen */
+.barAttributes:hover .CO2-print {
      font-size: 40px;
      color: #de1810;
- }
+}
 
+/* CSS styling for minimums CO2 tallet i hover menuen  */
 .barAttributes:hover .sortedMin {
     font-size: 20px;
     color: #339A70;
     font-weight: bold;
 }
+
+/* CSS styling for maximum CO2 tallet i hover menuen  */
 .barAttributes:hover .sortedMax {
     font-size: 20px;
     color: #de1810;
     font-weight: bold;
 }
 
+/* CSS styling for den brødtekst som står under titlen og over baren i hover menuen */
 .barAttributes:hover .textBoxDescription{
     color: black;
     font-size: medium;
@@ -183,6 +197,8 @@
     width: 90%;
     margin: auto;
 }
+
+/* CSS styling for den tekst som beskriver den mest miljøvenlige rejse i hover menuen */
 .barAttributes:hover .leftColumn{
     color: black;
     font-size: small;
@@ -190,8 +206,9 @@
     font-weight: lighter;
     padding-left: 5%;
     float: left;
-
 }
+
+/* CSS styling for den tekst som beskriver den mindst miljøvenlige rejse i hover menuen */
 .barAttributes:hover .rightColumn{
     color: black;
     font-size: small;
@@ -201,6 +218,7 @@
     float: right;
 }
 
+/* CSS styling for den horisontale linje inde i hover menuen, den som er under titlen */
 .barAttributes:hover hr {
     display: block;
     align-content: center;

@@ -5,7 +5,6 @@ function showText(something, string) { //something = co2-tallet
     //div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
 
-
 function showMinMax(something, string) {
     let div = document.getElementsByClassName(string);
     for (let i = 0; i < div.length; i++) {
@@ -21,8 +20,6 @@ function map_range(value, low1, high1, low2, high2) {
 
 $(function () {
     setTimeout(function () {
-
-
 
         let displayImage = new DisplayImage();
         //var emissionArray = new Array();
