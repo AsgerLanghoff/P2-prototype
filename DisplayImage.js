@@ -59,6 +59,7 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
 
                 '<div class="barAttributes"> ' +
+                '<img src="chrome-extension://cfofojdafpemfeffhcjpanohlhppeabo/data/pointer.png" alt="pointer" class = "showPointer"> ' +
                 '<img src="chrome-extension://cfofojdafpemfeffhcjpanohlhppeabo/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +
                 '<section class="textBox" id="textBox">' +
