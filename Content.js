@@ -63,8 +63,8 @@ $(function () {
                 sample = getPercent(minVal, maxVal);
 
             console.log(Math.trunc(sample(testResults[i])));
-            document.getElementsByClassName("showPointer").style.left = "50%";
 
+            document.querySelector('.showPointer').style.setProperty('left',"100%");
         }
 
 
