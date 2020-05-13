@@ -60,6 +60,7 @@ $(function () {
             console.log(testResults);
         for (let i =0; i < testResults.length; i++) {
             document.getElementById("Pointer" + i).style.setProperty("left", sample(testResults[i]) + "%");
+            document.getElementById("pointerInner" + i).style.setProperty("left", sample(testResults[i]) + "%");
             if (sample(testResults[i]) >66 ){
                 document.getElementById("resultWrapper" + i).style.setProperty("color", "#de1810");
 
