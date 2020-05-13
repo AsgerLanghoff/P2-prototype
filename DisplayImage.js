@@ -29,6 +29,7 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
 
                 '<div class="barAttributes"> ' +
+                '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/information.png" alt="information" class="informationIcon" id="informationIcon">' +
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/pointer.png" alt="pointer" class = "showPointer" id = "Pointer"> ' +
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +

@@ -9,7 +9,8 @@
     "data/logo.png",
     "data/dropDown.css",
     "data/bar.png",
-    "data/hoverStyle.css"
+    "data/hoverStyle.css",
+    "data/information.png"
   ],
   "permissions": [
     "webRequest",
@@ -51,7 +52,8 @@
       "data/icon.png",
       "Content.js",
       "background.js",
-      "data/logo.png"
+      "data/logo.png",
+      "data/information.png"
     ]
   }
 }
