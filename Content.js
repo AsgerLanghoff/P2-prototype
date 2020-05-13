@@ -41,9 +41,6 @@ function bubbleSort(arr){
 }
 
 
-
-
-
 $(function () {
     setTimeout(function () {
 

@@ -9,7 +9,7 @@
     width: 140px;
 
     /* mellemrum fra toppen og ned*/
-    margin-top: 30px;
+    margin-top: 20px;
 
     /* mellemru, i venstre side */
     margin-left: 0px;
@@ -93,7 +93,7 @@
     display: none;
 
     /* mellemrum tilvenstre for. højere left-værdi = placerer boksen mere til venstre */
-    left: 160px;
+    left: 165px;
 
     font-size: 0em;
 
@@ -121,8 +121,9 @@
     width: 0;
     height: 0;
     position: absolute;
+    z-index: 100;
     margin-top: -2px;
-    left: 140px;
+    left: 145px;
     border-top: 10px solid transparent;
     border-right: 20px solid #d9d9d9;
     border-bottom: 10px solid transparent;
@@ -132,7 +133,7 @@
 /* ændrer textBox når der bliver hoveret over bar */
 .barAttributes:hover .textBox {
     margin-top: 0px;
-    top: -45px;
+    top: -55px;
     display: block;
     box-sizing: border-box;
     width: 500px;
@@ -200,13 +201,6 @@
     padding-right: 5%;
     float: right;
 }
-
-/*.barAttributes:hover .textBox .hoverBar{
-    width: 100px;
-    height: 5px;
-    margin-top: 20px;
-    margin-left: 10px;
-}*/
 
 .barAttributes:hover hr {
     display: block;
