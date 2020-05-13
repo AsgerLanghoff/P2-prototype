@@ -48,10 +48,11 @@ $(function () {
             }
         }
         console.log(indexOfSortedResults);
-
-
+        
+        document.getElementById("id").style.marginLeft = "0px";
 
         //let a = accessData.resultWrapperFlightTime(4);
+
 /*
         let displayImage = new DisplayImage();
         displayImage.displayBar();
