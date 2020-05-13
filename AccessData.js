@@ -63,17 +63,6 @@ class AccessData {
         return flightTypeString;
     }
 
-
-
-
-
-
-
-
-
-
-
-
     //Old, still functional code.
     setFlightType() {
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
@@ -114,10 +103,5 @@ class AccessData {
         for (let i = 0; i < this.flightTime.length; i++) {
             console.log(this.flightTime[i]);
         }
-        /* eksempel for udregnet flyrejse mellem cph og frankfurt med en  Embraer 190
-        for (let i = 0; i < this.flightTime.length; i++) {
-            let a = 3.16 * ((44.7*this.flightTime[i]) * 0.8)/((95)*(0.95));
-            console.log("The flight with" +this.flightType[i]+ "equals to "+a+"kg of c02 per passenger")
-        }*/
     }
 }
