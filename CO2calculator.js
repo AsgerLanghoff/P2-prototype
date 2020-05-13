@@ -1,6 +1,7 @@
 var testResults = new Array(); //Since we can not use static variables in javaScript, we made this array global .
 
 
+
 class CO2calculator {
 
     wrapperResults = new Array();
@@ -27,20 +28,20 @@ class CO2calculator {
             let load = dataBase.getLoadFactor(type);
            // console.log("load"+load);
             let consumption = dataBase.getFuelConsumption(type, time);
-            console.log("consumption"+consumption);
+            //console.log("consumption"+consumption);
             let freight = dataBase.getFreightFactor();
           //  console.log("freight"+freight);
 
             let x = consumption * freight;
-            console.log("x = " +x);
+            //console.log("x = " +x);
             let y = seats * load;
-            console.log("y = " + y);
+            //console.log("y = " + y);
             let x_dividedBy_y = x/y;
-            console.log("x_dividedBy_y = "+ x_dividedBy_y);
+            //console.log("x_dividedBy_y = "+ x_dividedBy_y);
 
 
             let flightEmission = 3.16 * x_dividedBy_y;
-            console.log("emissionwrapper" +i+ flightEmission);
+            //console.log("emissionwrapper" +i+ flightEmission);
             this.wrapperResults.push(flightEmission);
         }
         this.findTotalResult();
