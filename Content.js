@@ -26,7 +26,19 @@ function showMinMax(something, string) {
 }
 
 
-
+function bubbleSort(arr){
+    var len = arr.length;
+    for (var i = len-1; i>=0; i--){
+        for(var j = 1; j<=i; j++){
+            if(arr[j-1]>arr[j]){
+                var temp = arr[j-1];
+                arr[j-1] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    return arr;
+}
 
 
 
@@ -44,15 +56,24 @@ $(function () {
         var indexOfSortedResults = new Array();
 
 
+
+
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let oneCalc = new CO2calculator(i);
             // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper" + i);
-            sortedResults = testResults.sort((a, b) => a - b);
+            console.log(testResults);
+
+
 
 
         }
+        const testResultsBuffer = testResults;
+        sortedResults = testResultsBuffer.sort((a, b) => a - b);
+        console.log(sortedResults);
+        console.log(testResults);
+        
         for (let j = 0; j < testResults.length; j++) {
             const
                 getPercent = (min, max) => value => 100 * (value - min) / (max - min),
@@ -60,12 +81,12 @@ $(function () {
                 minVal = sortedResults[0],
                 maxVal = sortedResults[sortedResults.length - 1],
                 sample = getPercent(minVal, maxVal);
-
-            console.log(Math.trunc(sample(testResults[j])));
-            document.querySelector(".showPointer").style.setProperty("left",sample(testResults[j]) +"%");
+            console.log(testResults[j]);
+            //console.log(Math.trunc(sample(testResults[j])));
+            document.getElementById("Pointer"+j).style.setProperty("left",sample(testResults[j]) +"%");
 
         }
-        //console.log(testResults);
+
         console.log(sortedResults);
 
         /*
