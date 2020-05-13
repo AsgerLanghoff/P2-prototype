@@ -78,9 +78,9 @@ $(function () {
                 sample = getPercent(minVal, maxVal);
 
             console.log(Math.trunc(sample(testResults[i])));
+
             document.querySelector(".showPointer").style.setProperty("left",sample(testResults[i]) +"%");
 
-        }
 
 */
 
