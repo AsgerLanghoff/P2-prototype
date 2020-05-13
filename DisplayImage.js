@@ -71,7 +71,8 @@ class DisplayImage {
                 '<p class="leftColumn"> Mest miljøvenlige <br> rejse for din <br> søgning: <span id="sortedMin" class="sortedMin"></span> CO<sub>2</sub></p>' +
                 '<p class="rightColumn"> Mindst miløjvenlige <br> rejse for <br> din søgning: <span id="sortedMax" class="sortedMax"></span>  CO<sub>2</sub></p>' +
                 '</section>' +
-                ' </div>');
+                ' </div>'+
+                '<div> <br> <br> </div>' );
 
 
             }
