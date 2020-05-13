@@ -29,9 +29,9 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
 
                 '<div class="barAttributes"> ' +
-                '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/information.png" alt="information" class="informationIcon" id="informationIcon">' +
-                '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/pointer.png" alt="pointer" class = "showPointer" id = "Pointer"> ' +
-                '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/bar.png" alt="test bar" class = "showBar"> ' +
+                '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/information.png" alt="information" class="informationIcon" id="informationIcon">' +
+                '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/pointer.png" alt="pointer" class = "showPointer" id = "Pointer"> ' +
+                '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +
                 '<section class="textBox" id="textBox">' +
                 '<h1 id="textFormat">Denne rejse udleder <span id="CO2-print" class="CO2-print" ></span> CO<sub>2</sub></h1>' +
