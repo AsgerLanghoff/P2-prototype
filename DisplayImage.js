@@ -59,7 +59,7 @@ class DisplayImage {
             $(e).find(".left-column").first().append(
 
                 '<div class="barAttributes"> ' +
-                '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/pointer.png" alt="pointer" class = "showPointer"> ' +
+                '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/pointer.png" alt="pointer" class = "showPointer" id = "Pointer"> ' +
                 '<img src="chrome-extension://dhdbohbajnnloobkandkolhoonjcbdig/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +
                 '<section class="textBox" id="textBox">' +
@@ -77,7 +77,8 @@ class DisplayImage {
             }
 
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
-                document.getElementById("CO2-print").id = "resultWrapper" + i;
+            document.getElementById("CO2-print").id = "resultWrapper" + i;
+            document.getElementById("Pointer").id = "Pointer" + i;
         }
 
     }
