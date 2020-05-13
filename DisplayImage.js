@@ -68,8 +68,8 @@ class DisplayImage {
                 '<p class="textBoxDescription">FN’s klimapanel IPCC har vurderet at en person maks må bruge 2500 kg CO2 per år i 2050 i kampen mod global opvarming.<br><br> Når du vælger et <span style="color: #339A70; font-weight: bold"> grønt fly </span> er du med til at skabe en bedre fremtid for alle</p>' +
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/pointer.png" alt="pointer" class = "showPointerInner"> ' +
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/bar.png" alt="indicatorBar" class="showBarInside" >' +
-                '<p class="leftColumn"> Mest miljøvenlige <br> rejse for din <br> søgning:  CO<sub>2</sub></p>' +
-                '<p class="rightColumn"> Mindst miløjvenlige <br> rejse for <br> din søgning:  CO<sub>2</sub></p>' +
+                '<p class="leftColumn"> Mest miljøvenlige <br> rejse for din <br> søgning: <span id="sortedMin" class="sortedMin"></span> CO<sub>2</sub></p>' +
+                '<p class="rightColumn"> Mindst miløjvenlige <br> rejse for <br> din søgning: <span id="sortedMax" class="sortedMax"></span>  CO<sub>2</sub></p>' +
                 '</section>' +
                 ' </div>');
 

@@ -156,6 +156,17 @@
      color: #e8a41d;
  }
 
+.barAttributes:hover .sortedMin {
+    font-size: 20px;
+    color: #339A70;
+    font-weight: bold;
+}
+.barAttributes:hover .sortedMax {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
 .barAttributes:hover .textBoxDescription{
     color: black;
     font-size: medium;

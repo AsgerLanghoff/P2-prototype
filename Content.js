@@ -16,6 +16,14 @@ function showText(something, string) { //something = co2-tallet
     //div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
 
+function showMinMax(something, string) {
+    let div = document.getElementsByClassName(string);
+    for (let i = 0; i < div.length; i++){
+        div[i].innerHTML = something;
+    }
+    console.log(something);
+}
+
 
 $(function () {
     setTimeout(function () {
@@ -39,11 +47,14 @@ $(function () {
 
         sortedResults = testResults.sort((a,b)=>a-b);
         console.log(sortedResults);
-        SortedMin = sortedResults[0];
-        SortedMax = sortedResults[sortedResults.length-1];
+        const SortedMin = sortedResults[0];
+        const SortedMax = sortedResults[sortedResults.length-1];
 
         console.log(SortedMin);
         console.log(SortedMax);
+
+        showMinMax(parseInt(SortedMin).toString(), "sortedMin");
+        showMinMax(parseInt(SortedMax).toString(), "sortedMax");
 
         for (let i = 0; i < calc.length; i++) {
             for(let j = 0; j < sortedResults.length; j++) {
