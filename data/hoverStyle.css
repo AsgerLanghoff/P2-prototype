@@ -8,15 +8,42 @@
     height: 15px;
     width: 140px;
 
-
     /* mellemrum fra toppen og ned*/
-    margin-top: 10px;
+    margin-top: 30px;
 
     /* mellemru, i venstre side */
     margin-left: 0px;
 
     cursor: pointer;
 }
+.showPointer {
+    position: absolute;
+    z-index: 100;
+    top: -10px;
+
+    /* placerer billedet i midten så der er 2px på hver side */
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+
+    box-shadow:0px 0px 0px black;
+    height: 22px;
+    width: 10px;
+
+}
+
+.showPointerInner {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+
+    margin-top: 3%;
+
+    box-shadow:0px 0px 0px black;
+    height: 30px;
+    width: 15px;
+}
+
 
 /* attributes til billedet er bare alignet med div elementet */
 .showBar {
@@ -129,6 +156,17 @@
      color: #e8a41d;
  }
 
+.barAttributes:hover .sortedMin {
+    font-size: 20px;
+    color: #339A70;
+    font-weight: bold;
+}
+.barAttributes:hover .sortedMax {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
 .barAttributes:hover .textBoxDescription{
     color: black;
     font-size: medium;
@@ -175,4 +213,3 @@
     padding-bottom: 10px;
     margin: auto;
 }
-

@@ -17,6 +17,14 @@ function showText(something, string) { //something = co2-tallet
 }
 
 
+function showMinMax(something, string) {
+    let div = document.getElementsByClassName(string);
+    for (let i = 0; i < div.length; i++){
+        div[i].innerHTML = something;
+    }
+    console.log(something);
+}
+
 $(function () {
     setTimeout(function () {
 
@@ -24,22 +32,43 @@ $(function () {
         //var emissionArray = new Array();
         displayImage.displayBar();
 
+        var calc;
+        var sortedResults;
+        var indexOfSortedResults = new Array();
+
+
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
-            let calc = new CO2calculator(i);
+            let oneCalc = new CO2calculator(i);
+            //calc.push(oneCalc);
            // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
-
         }
 
+        sortedResults = testResults.sort((a,b)=>a-b);
+        console.log(sortedResults);
+        const SortedMin = sortedResults[0];
+        const SortedMax = sortedResults[sortedResults.length-1];
 
+        console.log(SortedMin);
+        console.log(SortedMax);
 
+        showMinMax(parseInt(SortedMin).toString(), "sortedMin");
+        showMinMax(parseInt(SortedMax).toString(), "sortedMax");
 
+        for (let i = 0; i < calc.length; i++) {
+            for(let j = 0; j < sortedResults.length; j++) {
+                if(calc[i].finalResult == sortedResults[j]) {
+                    indexOfSortedResults.push(j);
+                }
+            }
+        }
+        console.log(indexOfSortedResults);
 
-
-
+        document.getElementsByClassName("pointer").style.marginLeft = "0px";
 
         //let a = accessData.resultWrapperFlightTime(4);
+
 /*
         let displayImage = new DisplayImage();
         displayImage.displayBar();
