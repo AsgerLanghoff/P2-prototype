@@ -76,7 +76,7 @@ class DisplayImage {
 
             }
 
-            for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
                 document.getElementById("CO2-print").id = "resultWrapper" + i;
         }
 

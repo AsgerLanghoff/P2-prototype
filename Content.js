@@ -49,11 +49,26 @@ $(function () {
             // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper" + i);
+            sortedResults = testResults.sort((a, b) => a - b);
 
 
         }
-        console.log(testResults);
-        sortedResults = testResults.sort((a, b) => a - b);
+        for (let j = 0; j < testResults.length; j++) {
+            const
+                getPercent = (min, max) => value => 100 * (value - min) / (max - min),
+                Results = [testResults],
+                minVal = sortedResults[0],
+                maxVal = sortedResults[sortedResults.length - 1],
+                sample = getPercent(minVal, maxVal);
+
+            console.log(Math.trunc(sample(testResults[j])));
+            document.querySelector(".showPointer").style.setProperty("left",sample(testResults[j]) +"%");
+
+        }
+        //console.log(testResults);
+        console.log(sortedResults);
+
+        /*
         for (let i = 0; i < testResults.length; i++) {
             const
                 getPercent = (min, max) => value => 100 * (value - min) / (max - min),
@@ -64,10 +79,10 @@ $(function () {
 
             console.log(Math.trunc(sample(testResults[i])));
 
-            document.querySelector('.showPointer').style.setProperty('left',"100%");
-        }
+            document.querySelector(".showPointer").style.setProperty("left",sample(testResults[i]) +"%");
 
 
+*/
 
 
 
@@ -88,17 +103,6 @@ $(function () {
 
         showMinMax(parseInt(SortedMin).toString(), "sortedMin");
         showMinMax(parseInt(SortedMax).toString(), "sortedMax");
-
-        for (let i = 0; i < calc.length; i++) {
-            for (let j = 0; j < sortedResults.length; j++) {
-                if (calc[i].finalResult == sortedResults[j]) {
-                    indexOfSortedResults.push(j);
-                }
-            }
-        }
-        console.log(indexOfSortedResults);
-
-        document.getElementsByClassName("pointer").style.marginLeft = "0px";
 
         //let a = accessData.resultWrapperFlightTime(4);
 
@@ -155,16 +159,6 @@ $(document).ready(function() {
             });
 
  */
-
-let displayImage = new DisplayImage();
-//var emissionArray = new Array();
-displayImage.displayBar();
-console.log(testResults);
-
-var sortedResults;
-var indexOfSortedResults = new Array();
-sortedResults = testResults.sort((a, b) => a - b);
-console.log(sortedResults);
 
 
 
