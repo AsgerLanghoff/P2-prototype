@@ -39,6 +39,11 @@ $(function () {
 
         sortedResults = testResults.sort((a,b)=>a-b);
         console.log(sortedResults);
+        SortedMin = sortedResults[0];
+        SortedMax = sortedResults[sortedResults.length-1];
+
+        console.log(SortedMin);
+        console.log(SortedMax);
 
         for (let i = 0; i < calc.length; i++) {
             for(let j = 0; j < sortedResults.length; j++) {
@@ -49,7 +54,7 @@ $(function () {
         }
         console.log(indexOfSortedResults);
 
-        document.getElementById("id").style.marginLeft = "0px";
+        document.getElementsByClassName("pointer").style.marginLeft = "0px";
 
         //let a = accessData.resultWrapperFlightTime(4);
 
