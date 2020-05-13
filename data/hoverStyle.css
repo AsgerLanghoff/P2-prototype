@@ -21,10 +21,15 @@
     z-index: 100;
     top: -10px;
 
-    /* placerer billedet i midten så der er 2px på hver side */
+
     margin-top: 0;
     margin-bottom: 30px;
     padding-bottom: 5px;
+    margin-left: auto;
+
+    display: block;
+    margin-right: 20px;
+    left: 100%;
 
     box-shadow:0px 0px 0px black;
     height: 22px;
@@ -54,7 +59,7 @@
 
     box-shadow:0px 0px 0px black;
     height: 5px;
-    width: 100%;
+    width: 105%;
 
     /* laver en border der afrunder hjørner*/
     border-radius: 5px;
