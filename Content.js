@@ -19,7 +19,7 @@ function showText(something, string) { //something = co2-tallet
 
 function showMinMax(something, string) {
     let div = document.getElementsByClassName(string);
-    for (let i = 0; i < div.length; i++){
+    for (let i = 0; i < div.length; i++) {
         div[i].innerHTML = something;
     }
     console.log(something);
@@ -39,16 +39,27 @@ $(function () {
 
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let oneCalc = new CO2calculator(i);
-            //calc.push(oneCalc);
-           // emissionArray.push(calc);
+            // emissionArray.push(calc);
             //emissionArray[i].calculator(i);
-            showText(parseInt(testResults[i]).toString(), "resultWrapper"+i);
-        }
+            showText(parseInt(testResults[i]).toString(), "resultWrapper" + i);
 
-        sortedResults = testResults.sort((a,b)=>a-b);
+
+        }
+        console.log(testResults);
+        sortedResults = testResults.sort((a, b) => a - b);
         console.log(sortedResults);
+        const
+            getPercent = (min, max) => value => 100 * (value - min) / (max - min),
+            Results = [testResults],
+            minVal = sortedResults[0],
+            maxVal = sortedResults[sortedResults.length - 1],
+            sample = getPercent(minVal, maxVal);
+
+        console.log(sample(testResults));
+
+
         const SortedMin = sortedResults[0];
-        const SortedMax = sortedResults[sortedResults.length-1];
+        const SortedMax = sortedResults[sortedResults.length - 1];
 
         console.log(SortedMin);
         console.log(SortedMax);
@@ -57,8 +68,8 @@ $(function () {
         showMinMax(parseInt(SortedMax).toString(), "sortedMax");
 
         for (let i = 0; i < calc.length; i++) {
-            for(let j = 0; j < sortedResults.length; j++) {
-                if(calc[i].finalResult == sortedResults[j]) {
+            for (let j = 0; j < sortedResults.length; j++) {
+                if (calc[i].finalResult == sortedResults[j]) {
                     indexOfSortedResults.push(j);
                 }
             }
@@ -69,21 +80,21 @@ $(function () {
 
         //let a = accessData.resultWrapperFlightTime(4);
 
-/*
-        let displayImage = new DisplayImage();
-        displayImage.displayBar();
-        for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
-            let accessData = new AccessData();
-            showText(calculator.calculator(accessData.resultWrapperFlightType(i), accessData.resultWrapperFlightTime(i), i), "resultWrapper" + i);
-        }
+        /*
+                let displayImage = new DisplayImage();
+                displayImage.displayBar();
+                for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
+                    let accessData = new AccessData();
+                    showText(calculator.calculator(accessData.resultWrapperFlightType(i), accessData.resultWrapperFlightTime(i), i), "resultWrapper" + i);
+                }
 
 
-        // accessData.setFlightType();
-        //accessData.setFlightTime();
+                // accessData.setFlightType();
+                //accessData.setFlightTime();
 
 
 
-*/
+        */
     }, 5000);
 });
 
@@ -122,6 +133,16 @@ $(document).ready(function() {
             });
 
  */
+
+let displayImage = new DisplayImage();
+//var emissionArray = new Array();
+displayImage.displayBar();
+console.log(testResults);
+
+var sortedResults;
+var indexOfSortedResults = new Array();
+sortedResults = testResults.sort((a, b) => a - b);
+console.log(sortedResults);
 
 
 
