@@ -1,6 +1,6 @@
 class Database {
 
-    LIST_OF_PLANES = ["Boeing 737-800", "Boeing 737-700", "Airbus A320", "Airbus A321", "Boeing 757-200", "Airbus A319", "Boeing 737-900ER", "Embraer E175", "Bombardier CRJ900", "Bombardier CRJ700"]; //List of the most used Aircrafts http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
+    LIST_OF_PLANES = ["Boeing 737-800", "Boeing 737-700", "Airbus A320", "Airbus A321", "Boeing 757-200", "Airbus A319", "Boeing 737-900ER", "Embraer E175", "Canadair (Bombardier) Regional Jet 900", "Canadair (Bombardier) Regional Jet 700", "Airbus A319", "Airbus A320-100/200"]; //List of the most used Aircrafts http://www.fi-aeroweb.com/US-Commercial-Aircraft-Fleet.html
 
     LIST_OF_DISTANCE = [125, 250, 500, 750, 1000, 1500, 2000, 2500, 3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000, 8500]; //Nautical Miles. This distance is in nautical miles.
 
@@ -15,19 +15,20 @@ class Database {
         /*Embraer E175*/ [1113, 2240, 2989, 3953, 4890, 6725], //Embraer har koden E7W, som svarer til E75 i ICAOs Equivalent Aircraft Mapping
         /*Bombardier CRJ900*/ [1119, 2251, 2994, 3949, 4872, 6664],
         /*Bombardier CRJ700*/ [1043, 2092, 2772, 3642, 4475, 6076],
-
+        /*Airbus A319*/ [1596, 3259, 4323, 5830 ,7271, 10026, 12668, 15233, 17741, 20203],
+        /*Airbus A320-100/200*/ [1672, 3430, 4585, 6212, 7772, 10766, 13648, 16452],
     ];
 
     FUEL_CONSUMPTION_OTHER = [1672, 3430, 4585, 6212, 7772, 10766, 13648, 16452, 45056, 51831, 58678, 65621, 72666, 79159, 85687, 89019, 91982, 94586, 96840, 98752]; // In reality, these number can vary +- 20'000...
 
-    NUMBER_OF_Y_SEATS = [162, 141, 96, 176, 200, 160, 177, 90, 68]; //The position in this array corresponds to LIST_OF_PLANES. Y_Seats = economy seats
+    NUMBER_OF_Y_SEATS = [162, 141, 96, 176, 200, 160, 177, 90, 68, 140, 192]; //The position in this array corresponds to LIST_OF_PLANES. Y_Seats = economy seats
     NUMBER_OF_Y_SEATS_OTHER = 165; //This number is open for discussion
 
     PAX_LOAD_FACTOR = 80; //This number is open for discussion
 
     PAX_TO_FREIGHT_FACTOR = 96; //This number is open for discussion
 
-    KM_PER_HOUR = [842, 828, 840, 833, 850, 828, 925, 830, 829]; ////The position in this array corresponds to LIST_OF_PLANES. Enter the cruise speed of the aircraft
+    KM_PER_HOUR = [842, 828, 840, 833, 850, 828, 925, 830, 829, 828, 842]; ////The position in this array corresponds to LIST_OF_PLANES. Enter the cruise speed of the aircraft
     KM_PER_HOUR_OTHER = 850;
 
 
