@@ -57,23 +57,19 @@ class DisplayImage {
 
             //Here, we find the first instance of ".left-column" and appends some HTML code.
             $(e).find(".left-column").first().append(
-                '<div class="barAttributes">' +
 
-
-                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/pointer.png" alt="pointer" class = "showPointer"</img>' +
-
-
-                '<img src="chrome-extension://hehfejbelgaicjabkhbcnegpneadbkph/data/bar.png" alt="test bar" class = "showBar"</img>' +
-
-
+                '<div class="barAttributes"> ' +
+                '<img src="chrome-extension://cfofojdafpemfeffhcjpanohlhppeabo/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +
-
-                '<div class="textBox" id="textBox">' +
-
-                '<p class="textFormat">Denne rejse udleder <span class="CO2-print" id="CO2-print"></span> </p>' +
-
-                '</div>' +
-                '</div>');
+                '<section class="textBox" id="textBox">' +
+                '<h1 id="textFormat">Denne rejse udleder <span id="CO2-print" class="CO2-print" ></span> CO<sub>2</sub></h1>' +
+                '<hr>' +
+                '<p class="textBoxDescription">FN’s klimapanel IPCC har vurderet at en person maks må bruge 2500 kg CO2 per år i 2050 i kampen mod global opvarming.<br><br> Når du vælger et <span style="color: #339A70; font-weight: bold"> grønt fly </span> er du med til at skabe en bedre fremtid for alle</p>' +
+                '<img src="chrome-extension://cfofojdafpemfeffhcjpanohlhppeabo/data/bar.png" alt="indicatorBar" class="showBarInside" >' +
+                '<p class="leftColumn"> Mest miljøvenlige <br> rejse for din <br> søgning:  CO<sub>2</sub></p>' +
+                '<p class="rightColumn"> Mindst miløjvenlige <br> rejse for <br> din søgning:  CO<sub>2</sub></p>' +
+                '</section>' +
+                ' </div>');
 
 
             }
