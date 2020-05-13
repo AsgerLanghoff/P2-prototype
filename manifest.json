@@ -3,6 +3,7 @@
   "name": "Green Skies",
   "version": "0.1",
   "web_accessible_resources": [
+    "data/pointer.png",
     "icon.png",
     "Content.js",
     "background.js",
@@ -54,7 +55,8 @@
       "background.js"
     ],
     "web_accessible_resources": [
-      "icon.png",
+      "pointer.png",
+      "data/icon.png",
       "Content.js",
       "background.js",
       "data/logo.png",

@@ -4,6 +4,8 @@ var testResults = new Array(); //Since we can not use static variables in javaSc
 class CO2calculator {
 
     wrapperResults = new Array();
+    finalResult;
+    index;
 
 
     //Calculates the C02 emission based on the ICAO calculation. The missing variables will be loaded from the dataset.
@@ -58,6 +60,7 @@ class CO2calculator {
         for (let i = 0; i < this.wrapperResults.length; i++) {
             sum = sum + this.wrapperResults[i];
         }
+        this.finalResult = sum;
         this.storeToTestResults(sum);
         this.resetArray();
         return sum;
@@ -73,5 +76,6 @@ class CO2calculator {
 
     constructor(num) {
         this.calculator(num);
+        this.index = num;
     }
 }

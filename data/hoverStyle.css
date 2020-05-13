@@ -8,15 +8,42 @@
     height: 15px;
     width: 140px;
 
-
     /* mellemrum fra toppen og ned*/
-    margin-top: 10px;
+    margin-top: 30px;
 
     /* mellemru, i venstre side */
     margin-left: 0px;
 
     cursor: pointer;
 }
+.showPointer {
+    position: absolute;
+    z-index: 100;
+    top: -10px;
+
+    /* placerer billedet i midten så der er 2px på hver side */
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+
+    box-shadow:0px 0px 0px black;
+    height: 22px;
+    width: 10px;
+
+}
+
+.showPointerInner {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+
+    margin-top: 3%;
+
+    box-shadow:0px 0px 0px black;
+    height: 30px;
+    width: 15px;
+}
+
 
 /* attributes til billedet er bare alignet med div elementet */
 .showBar {
@@ -38,7 +65,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 90%;
-    padding-top: 15%;
+    padding-top: 8%;
     padding-bottom: 2%;
 
 }
@@ -117,7 +144,7 @@
 
     font-size: x-large;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     padding-top: 15px;
     padding-bottom: 10px;
     margin: auto;
@@ -131,7 +158,7 @@
 
 .barAttributes:hover .textBoxDescription{
     color: black;
-    font-size: small;
+    font-size: medium;
     display: block;
     font-weight: lighter;
     padding-top: 0px;
