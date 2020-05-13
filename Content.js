@@ -54,7 +54,7 @@ $(function () {
         }
         console.log(indexOfSortedResults);
 
-        document.getElementById("id").style.marginLeft = "0px";
+        document.getElementsByClassName("pointer").style.marginLeft = "0px";
 
         //let a = accessData.resultWrapperFlightTime(4);
 
