@@ -159,7 +159,7 @@
 .barAttributes:hover .CO2-print {
 
      font-size: 40px;
-     color: #e8a41d;
+     color: #de1810;
  }
 
 .barAttributes:hover .sortedMin {
@@ -169,7 +169,7 @@
 }
 .barAttributes:hover .sortedMax {
     font-size: 20px;
-    color: red;
+    color: #de1810;
     font-weight: bold;
 }
 

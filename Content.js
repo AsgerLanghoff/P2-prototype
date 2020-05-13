@@ -54,40 +54,41 @@ $(function () {
         var calc;
         var sortedResults;
         var indexOfSortedResults = new Array();
-
+        const testResultsBuffer = new Array();
 
 
 
         for (let i = 0; i < document.getElementsByClassName("resultWrapper").length; i++) {
             let oneCalc = new CO2calculator(i);
-            // emissionArray.push(calc);
-            //emissionArray[i].calculator(i);
             showText(parseInt(testResults[i]).toString(), "resultWrapper" + i);
-            console.log(testResults);
-
-
 
 
         }
-        const testResultsBuffer = testResults;
+        for (let i = 0; i < testResults.length; i++){
+            testResultsBuffer.push(testResults[i]);
+        }
         sortedResults = testResultsBuffer.sort((a, b) => a - b);
-        console.log(sortedResults);
-        console.log(testResults);
-        
-        for (let j = 0; j < testResults.length; j++) {
+
             const
                 getPercent = (min, max) => value => 100 * (value - min) / (max - min),
-                Results = [testResults],
                 minVal = sortedResults[0],
                 maxVal = sortedResults[sortedResults.length - 1],
                 sample = getPercent(minVal, maxVal);
-            console.log(testResults[j]);
-            //console.log(Math.trunc(sample(testResults[j])));
-            document.getElementById("Pointer"+j).style.setProperty("left",sample(testResults[j]) +"%");
+            console.log(testResults);
+        for (let i =0; i < testResults.length; i++) {
+            document.getElementById("Pointer" + i).style.setProperty("left", sample(testResults[i]) + "%");
+            if (sample(testResults[i]) >66 ){
+                document.getElementById("resultWrapper" + i).style.setProperty("color", "#de1810");
 
+            }
+            else if (sample(testResults[i]) >33 ){
+                document.getElementById("resultWrapper" + i).style.setProperty("color", "#ffb933");
+            }
+            else {
+                document.getElementById("resultWrapper" + i).style.setProperty("color", "#339A70");
+            }
         }
 
-        console.log(sortedResults);
 
         /*
         for (let i = 0; i < testResults.length; i++) {
