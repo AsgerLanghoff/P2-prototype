@@ -25,6 +25,13 @@ function showMinMax(something, string) {
     console.log(something);
 }
 
+
+
+
+
+
+
+
 $(function () {
     setTimeout(function () {
 
@@ -47,15 +54,30 @@ $(function () {
         }
         console.log(testResults);
         sortedResults = testResults.sort((a, b) => a - b);
-        console.log(sortedResults);
-        const
-            getPercent = (min, max) => value => 100 * (value - min) / (max - min),
-            Results = [testResults],
-            minVal = sortedResults[0],
-            maxVal = sortedResults[sortedResults.length - 1],
-            sample = getPercent(minVal, maxVal);
+        for (let i = 0; i < testResults.length; i++) {
+            const
+                getPercent = (min, max) => value => 100 * (value - min) / (max - min),
+                Results = [testResults],
+                minVal = sortedResults[0],
+                maxVal = sortedResults[sortedResults.length - 1],
+                sample = getPercent(minVal, maxVal);
 
-        console.log(sample(testResults));
+            console.log(Math.trunc(sample(testResults[i])));
+            document.getElementsByClassName("showPointer").style.left = "50%";
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         const SortedMin = sortedResults[0];
