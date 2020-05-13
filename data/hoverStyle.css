@@ -8,9 +8,8 @@
     height: 15px;
     width: 140px;
 
-
     /* mellemrum fra toppen og ned*/
-    margin-top: 10px;
+    margin-top: 30px;
 
     /* mellemru, i venstre side */
     margin-left: 0px;
@@ -19,14 +18,30 @@
 }
 .showPointer {
     position: absolute;
+    z-index: 100;
+    top: -10px;
 
     /* placerer billedet i midten så der er 2px på hver side */
-    margin-top: 0px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
 
     box-shadow:0px 0px 0px black;
-    height: 8px;
-    width: 100%;
+    height: 22px;
+    width: 10px;
 
+}
+
+.showPointerInner {
+    position: absolute;
+    z-index: 100;
+    left: 24px;
+
+    margin-top: 3%;
+
+    box-shadow:0px 0px 0px black;
+    height: 30px;
+    width: 15px;
 }
 
 
