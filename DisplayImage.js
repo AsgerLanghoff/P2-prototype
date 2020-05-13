@@ -39,6 +39,9 @@ class DisplayImage {
     displayBar() {
         // $(".resultWrapper").css("overflow", "visible"); //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
         console.log("det virker");
+        var picpointer = chrome.runtime.getURL("pointer.png");
+        console.log("pointer:" + picpointer);
+        console.log("bar:" + chrome.runtime.getURL("bar.png"));
 
         //elemnets is an array that can be used to show the amounts of resultwrappers with the .length command(used in the "for"loop)
         const elements = document.getElementsByClassName("resultWrapper");
@@ -54,6 +57,7 @@ class DisplayImage {
 
             //Here, we find the first instance of ".left-column" and appends some HTML code.
             $(e).find(".left-column").first().append(
+
                 '<div class="barAttributes"> ' +
                 '<img src="chrome-extension://cfofojdafpemfeffhcjpanohlhppeabo/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +

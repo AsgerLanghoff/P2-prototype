@@ -17,6 +17,18 @@
 
     cursor: pointer;
 }
+.showPointer {
+    position: absolute;
+
+    /* placerer billedet i midten så der er 2px på hver side */
+    margin-top: 0px;
+
+    box-shadow:0px 0px 0px black;
+    height: 8px;
+    width: 100%;
+
+}
+
 
 /* attributes til billedet er bare alignet med div elementet */
 .showBar {
