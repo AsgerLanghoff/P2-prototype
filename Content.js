@@ -16,6 +16,7 @@ function showText(something, string) { //something = co2-tallet
     //div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
 
+
 function showMinMax(something, string) {
     let div = document.getElementsByClassName(string);
     for (let i = 0; i < div.length; i++){
@@ -23,7 +24,6 @@ function showMinMax(something, string) {
     }
     console.log(something);
 }
-
 
 $(function () {
     setTimeout(function () {
