@@ -1,6 +1,5 @@
 function showText(something, string) { //something = co2-tallet
     let div = document.getElementById(string);
-    console.log("div= " + div);
     div.innerHTML = something + " kg"; //hvad der bliver printet i hover box
     //div.innerHTML = "Denne rejse udleder " + something + " kg CO2"; //hvad der bliver printet i hover box
 }
@@ -10,7 +9,6 @@ function showMinMax(something, string) {
     for (let i = 0; i < div.length; i++) {
         div[i].innerHTML = something;
     }
-    console.log(something);
 }
 
 function map_range(value, low1, high1, low2, high2) {
@@ -73,9 +71,6 @@ $(function () {
 
         const SortedMin = sortedResults[0];
         const SortedMax = sortedResults[sortedResults.length - 1];
-
-        console.log(SortedMin);
-        console.log(SortedMax);
 
         showMinMax(parseInt(SortedMin).toString(), "sortedMin");
         showMinMax(parseInt(SortedMax).toString(), "sortedMax");

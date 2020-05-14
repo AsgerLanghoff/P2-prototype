@@ -58,7 +58,6 @@ class Database {
             if (currentNum < closestNum || i == 0) {
                 closestNum = currentNum;
                 closestIndex = i - 1;//-1 for adjusting the number. THIS MIGHT CHANGE
-                console.log("index" + closestIndex);
             }
         }
 

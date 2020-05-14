@@ -20,28 +20,18 @@ class CO2calculator {
         accessData.resultWrapperFlightTime(num);
         for (let i = 0; i < wrapper.getElementsByClassName("planeDetails details-subheading").length; i++) {
             let type = accessData.getOneFlightType(i);
-            //console.log("type" + type);
             let time = accessData.getOneFlightTime(i);
-           // console.log("time" + time);
             let seats = dataBase.getNumberOfYSeats(type);
-          //  console.log("seats" + seats);
             let load = dataBase.getLoadFactor(type);
-           // console.log("load"+load);
             let consumption = dataBase.getFuelConsumption(type, time);
-            //console.log("consumption"+consumption);
             let freight = dataBase.getFreightFactor();
-          //  console.log("freight"+freight);
 
             let x = consumption * freight;
-            //console.log("x = " +x);
             let y = seats * load;
-            //console.log("y = " + y);
             let x_dividedBy_y = x/y;
-            //console.log("x_dividedBy_y = "+ x_dividedBy_y);
 
 
             let flightEmission = 3.16 * x_dividedBy_y;
-            //console.log("emissionwrapper" +i+ flightEmission);
             this.wrapperResults.push(flightEmission);
         }
         this.findTotalResult();
