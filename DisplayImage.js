@@ -5,7 +5,6 @@ class DisplayImage {
     constructor() {
     }
 
-
     displayBar() {
         // $(".resultWrapper").css("overflow", "visible"); //sætter resultWrapperens overflow til visible så vi kan gå ud af dens rammer
         console.log("det virker");
@@ -33,7 +32,8 @@ class DisplayImage {
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/pointer.png" alt="pointer" class = "showPointer" id = "Pointer"> ' +
                 '<img src="chrome-extension://kfanbomikhoiibhgbjpjkgpkgdnejonf/data/bar.png" alt="test bar" class = "showBar"> ' +
                 '<div class="triangle-left"></div>' +
-                '<section class="textBox" id="textBox">' +
+
+                '<section class="textBox" id="textBox">' +      // This textBox determins the size of the box that it to be shown when hovered
                 '<h1 id="textFormat">Med denne rejse udleder du <span id="CO2-print" class="CO2-print" ></span> CO<sub>2</sub></h1>' +
                 '<hr>' +
                 '<p class="textBoxDescription">FN’s klimapanel IPCC har vurderet at en person maks må bruge 2500 kg CO2 per år i 2050 i kampen mod global opvarming.<br><br> Når du vælger et <span style="color: #339A70; font-weight: bold"> grønt fly </span> er du med til at skabe en bedre fremtid for alle</p>' +
