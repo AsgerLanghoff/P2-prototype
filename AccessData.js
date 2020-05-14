@@ -15,7 +15,6 @@ class AccessData {
         let wrapper = document.getElementsByClassName("resultWrapper")[num];
         for (let j = 0; j < wrapper.getElementsByClassName("planeDetails details-subheading").length; j++) {
             const y = wrapper.getElementsByClassName("segmentDuration text-row")[j];
-            //this.flightTime.push(y.innerText);
             let split = y.innerText.split(" ");
 
             if (split.length > 1) {
@@ -28,9 +27,7 @@ class AccessData {
             }
         }
         for (let i = 0; i < this.wrapperTime.length; i++) {
-         //   console.log(this.wrapperTime[i]);
         }
-        //return wrapperTime;
     }
 
 
@@ -88,7 +85,6 @@ class AccessData {
             let x = document.getElementsByClassName("resultWrapper")[num];
             for (let j = 0; j < x.getElementsByClassName("planeDetails details-subheading").length; j++) {
                 const y = x.getElementsByClassName("segmentDuration text-row")[j];
-                //this.flightTime.push(y.innerText);
                 let split = y.innerText.split(" ");
                 if (split.length > 1) {
                     this.flightTime.push(parseInt(split[0]) * 60 + parseInt(split[1]));
