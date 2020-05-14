@@ -51,5 +51,10 @@
       "data/logo.png",
       "data/information.png"
     ]
+  },
+  "icons": {
+    "16": "data/logo.png",
+    "48": "data/logo.png",
+    "128": "data/logo.png"
   }
 }
