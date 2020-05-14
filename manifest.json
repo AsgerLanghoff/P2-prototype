@@ -4,25 +4,15 @@
   "version": "0.1",
   "web_accessible_resources": [
     "data/pointer.png",
-    "icon.png",
     "Content.js",
     "background.js",
     "data/logo.png",
-    "logo(1).jpg",
-    "cogwheel.png",
-    "data/aplus.png",
     "data/dropDown.css",
-    "data/cssFile.css",
     "data/bar.png",
     "data/hoverStyle.css",
-    "HoverBox.html"
-
+    "data/information.png"
   ],
-  "permissions": [
-    "webRequest",
-    "webRequestBlocking",
-    "<all_urls>"
-  ],
+  "permissions": ["activeTab"],
   "content_scripts": [
     {
       "matches": [
@@ -32,7 +22,6 @@
         "data/hoverStyle.css"
       ],
       "html": [
-        "HoverBox.html"
       ],
       "js": [
         "jquery-3.5.0.min.js",
@@ -55,13 +44,12 @@
       "background.js"
     ],
     "web_accessible_resources": [
-      "pointer.png",
+      "data/pointer.png",
       "data/icon.png",
       "Content.js",
       "background.js",
       "data/logo.png",
-      "logo(1).jpg"
+      "data/information.png"
     ]
-
   }
 }
