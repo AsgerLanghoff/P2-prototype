@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*.momondo.dk/*"
+        "*://*.momondo.dk/flight-search/*"
       ],
       "css": [
         "data/hoverStyle.css"
