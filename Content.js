@@ -15,9 +15,9 @@ function map_range(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
 }
 
+var completet = document.getElementsByTagName("GRFiS-0n-C");
 
-$(function () {
-    setTimeout(function () {
+    completet.onload = function() {
 
         let displayImage = new DisplayImage();
         //var emissionArray = new Array();
@@ -75,5 +75,4 @@ $(function () {
         showMinMax(parseInt(SortedMin).toString(), "sortedMin");
         showMinMax(parseInt(SortedMax).toString(), "sortedMax");
 
-    },5000);
-});
+    };
